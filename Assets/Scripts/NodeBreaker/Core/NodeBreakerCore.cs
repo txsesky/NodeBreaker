@@ -36,7 +36,9 @@ namespace NodeBreaker.Core
 
             if (GUI.Button(new Rect(0, 151, 300, 150), "Disassemble", customButton))
             {
+                var time = Time.realtimeSinceStartup;
                 Disassemble();
+                print(Time.realtimeSinceStartup - time);
             }
 
             if (GUI.Button(new Rect(0, 302, 300, 150), "Assemble", customButton))
@@ -87,12 +89,12 @@ namespace NodeBreaker.Core
 
                     var entities = movableChunks[i];
                     SortMovableEntitiesInOrder(ref entities);
-                    CalculateDesiredPosition(ref entities, m_ChunksBases[i]);
+                    //CalculateDesiredPosition(ref entities, m_ChunksBases[i]);
                     movableChunks[i] = entities;
                 }
 
                 StopAllCoroutines();
-                var list = m_Chunks;
+                var list = movableChunks;
                 StartCoroutine(DrawLines(list));
 
                 m_Initialized = true;
@@ -105,6 +107,7 @@ namespace NodeBreaker.Core
 
             for (int i = 0; i < m_Chunks.Count; i++)
             {
+                movableChunks.Add(new List<Entity>());
                 for (int j = 0; j < m_Chunks[i].Count; j++)
                 {
                     for (int k = 0; k < entitiesMatchingName.Count; k++)
@@ -138,6 +141,8 @@ namespace NodeBreaker.Core
                     e1.cubeCollider = CalculateSingleCubeCollider(e1.singleObb);
                     entities[i] = e1;
                 }
+                
+                e1.otherIds = new List<int>();
 
                 for (int j = i + 1; j < entities.Count; j++)
                 {
@@ -161,6 +166,7 @@ namespace NodeBreaker.Core
                     var ent = entities[i];
                     ent.chunkGroup = groupNumber;
                     ent.hasGroup = true;
+                    chunks.Add(new List<Entity>());
                 }
 
                 if (!chunks[entities[i].chunkGroup].Contains(entities[i]))
@@ -245,12 +251,16 @@ namespace NodeBreaker.Core
 
                 for (int j = 0; j < children.Count; j++)
                 {
-                    var center = entities[i].singleObb.Box.Center;
+                    var ent = children[j];
+                    CalcucalteSingleOBB(ref ent);
+                    children[j] = ent;
 
-                    var axisX = entities[i].singleObb.Box.AxisX;
-                    var axisY = entities[i].singleObb.Box.AxisY;
-                    var axisZ = entities[i].singleObb.Box.AxisZ;
-                    var extends = entities[i].singleObb.Box.Extent;
+                    var center = children[j].singleObb.Box.Center;
+
+                    var axisX = children[j].singleObb.Box.AxisX;
+                    var axisY = children[j].singleObb.Box.AxisY;
+                    var axisZ = children[j].singleObb.Box.AxisZ;
+                    var extends = children[j].singleObb.Box.Extent;
 
                     var A = center - extends.z * axisZ - extends.x * axisX - axisY * extends.y;
                     var B = center - extends.z * axisZ + extends.x * axisX - axisY * extends.y;
@@ -283,12 +293,38 @@ namespace NodeBreaker.Core
             if (entity.gameObject.GetComponent<MeshFilter>() == null)
                 return;
 
-            Vector3d[] points = new Vector3d[entity.gameObject.GetComponent<MeshFilter>().sharedMesh.vertexCount];
+            //var points = new List<Vector3d>();
 
-            for (int i = 0; i < points.Length; i++)
+            /*for (int i = 0; i < entity.gameObject.GetComponent<MeshFilter>().sharedMesh.vertices.LongLength; i++)
             {
-                points[i] = entity.gameObject.GetComponent<MeshFilter>().sharedMesh.vertices[i];
-            }
+                points.Add(entity.gameObject.GetComponent<MeshFilter>().sharedMesh.vertices[i]);
+            }*/
+
+            var min = entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.min;
+            var max = entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.max;
+
+            var a = entity.gameObject.transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, min.z));
+            var b = entity.gameObject.transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, max.z));
+            var c = entity.gameObject.transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, min.z));
+            var d = entity.gameObject.transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, max.z));
+            var e = entity.gameObject.transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, min.z));
+            var f = entity.gameObject.transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, max.z));
+            var g = entity.gameObject.transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, min.z));
+            var h = entity.gameObject.transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, max.z));
+
+            var points = new[]
+            {
+                new Vector3d(a),
+                new Vector3d(b), 
+                new Vector3d(c),
+                new Vector3d(d),
+                new Vector3d(e), 
+                new Vector3d(f), 
+                new Vector3d(g), 
+                new Vector3d(h), 
+            };
+            
+            print($"{a} {b} {c} {d} {e} {f} {g} {h}");
 
             entity.singleObb = new ContOrientedBox3(points);
 
@@ -303,7 +339,7 @@ namespace NodeBreaker.Core
             var axisY = (Vector3) orientedBoundingBox.Box.AxisY;
             var axisZ = (Vector3) orientedBoundingBox.Box.AxisZ;
             var extends = (Vector3) orientedBoundingBox.Box.Extent;
-            
+
             var A = center - extends.z * axisZ - extends.x * axisX - axisY * extends.y;
             var B = center - extends.z * axisZ + extends.x * axisX - axisY * extends.y;
             var C = center - extends.z * axisZ + extends.x * axisX + axisY * extends.y;
@@ -335,7 +371,7 @@ namespace NodeBreaker.Core
             var axisY = (Vector3) orientedBoundingBox.Box.AxisY;
             var axisZ = (Vector3) orientedBoundingBox.Box.AxisZ;
             var extends = (Vector3) orientedBoundingBox.Box.Extent;
-            
+
             var A = center - extends.z * axisZ - extends.x * axisX - axisY * extends.y;
             var B = center - extends.z * axisZ + extends.x * axisX - axisY * extends.y;
             var C = center - extends.z * axisZ + extends.x * axisX + axisY * extends.y;
@@ -345,21 +381,21 @@ namespace NodeBreaker.Core
             var F = center + extends.z * axisZ + extends.x * axisX - axisY * extends.y;
             var G = center + extends.z * axisZ + extends.x * axisX + axisY * extends.y;
             var H = center + extends.z * axisZ - extends.x * axisX + axisY * extends.y;
-            
-            Debug.DrawLine(A, B);
-            Debug.DrawLine(B, C);
-            Debug.DrawLine(C, D);
-            Debug.DrawLine(D, A);
 
-            Debug.DrawLine(E, F);
-            Debug.DrawLine(F, G);
-            Debug.DrawLine(G, H);
-            Debug.DrawLine(H, E);
+            Debug.DrawLine(A, B, Color.black, Mathf.Infinity);
+            Debug.DrawLine(B, C, Color.black, Mathf.Infinity);
+            Debug.DrawLine(C, D, Color.black, Mathf.Infinity);
+            Debug.DrawLine(D, A, Color.black, Mathf.Infinity);
 
-            Debug.DrawLine(A, E);
-            Debug.DrawLine(B, F);
-            Debug.DrawLine(D, H);
-            Debug.DrawLine(C, G);
+            Debug.DrawLine(E, F, Color.black, Mathf.Infinity);
+            Debug.DrawLine(F, G, Color.black, Mathf.Infinity);
+            Debug.DrawLine(G, H, Color.black, Mathf.Infinity);
+            Debug.DrawLine(H, E, Color.black, Mathf.Infinity);
+
+            Debug.DrawLine(A, E, Color.black, Mathf.Infinity);
+            Debug.DrawLine(B, F, Color.black, Mathf.Infinity);
+            Debug.DrawLine(D, H, Color.black, Mathf.Infinity);
+            Debug.DrawLine(C, G, Color.black, Mathf.Infinity);
         }
 
         /*private void CalculateCenterOfMass(ref Entity chunkBase)
@@ -416,7 +452,7 @@ namespace NodeBreaker.Core
 
                 var posList = new List<Vector3>();
 
-                var entities = Helper.GetChildrenWithMesh(chunksBases[k]);
+                var entities = chunks[k];
 
                 for (int i = 0; i < entities.Count; i++)
                 {
@@ -559,7 +595,7 @@ namespace NodeBreaker.Core
         {
             throw new NotImplementedException();
         }
-        
+
         private bool IsOverlapOrNear(Entity one, Entity two, float tolerance)
         {
             /*if ((one.cubeCollider.center - two.cubeCollider.center).magnitude < tolerance)
@@ -568,7 +604,7 @@ namespace NodeBreaker.Core
             }
             else
             {*/
-                return CollisionDetector.IsOverlap(one.cubeCollider, two.cubeCollider);
+            return CollisionDetector.IsOverlap(one.cubeCollider, two.cubeCollider);
             //}
         }
 
@@ -630,9 +666,10 @@ namespace NodeBreaker.Core
                     yield return new WaitForSeconds(0.3f);
 
                     Debug.DrawLine((Vector3) entity.composedObb.Box.Center,
-                        (Vector3) entity.composedObb.Box.Center + entity.desiredDirection * (entity.distanceFromBaseCenter + 5),
+                        (Vector3) entity.composedObb.Box.Center +
+                        entity.desiredDirection * (entity.distanceFromBaseCenter + 5),
                         Color.yellow,
-                        20);
+                        Mathf.Infinity);
                 }
             }
         }
