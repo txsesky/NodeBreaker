@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\txses\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\txses\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_wd_sandbox.113019042.00" t="ExcludeRecursive" />
+    <e p="D:\Repositories\wd_sandbox" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="geometry3Sharp-master" t="Include">
+          <e p="approximation" t="Include">
+            <e p="BiArcFit2.cs" t="Include" />
+            <e p="GaussPointsFit3.cs" t="Include" />
+            <e p="OrthogonalPlaneFit3.cs" t="Include" />
+            <e p="QuadraticFit2.cs" t="Include" />
+          </e>
+          <e p="color" t="Include">
+            <e p="Colorb.cs" t="Include" />
+            <e p="Colorf.cs" t="Include" />
+            <e p="ColorHSV.cs" t="Include" />
+            <e p="ColorMap.cs" t="Include" />
+            <e p="ColorMixer.cs" t="Include" />
+          </e>
+          <e p="comp_geom" t="Include">
+            <e p="Arrangement2d.cs" t="Include" />
+            <e p="ConvexHull2.cs" t="Include" />
+            <e p="GraphCells2d.cs" t="Include" />
+            <e p="GraphSplitter2d.cs" t="Include" />
+            <e p="SphericalFibonacciPointSet.cs" t="Include" />
+          </e>
+          <e p="containment" t="Include">
+            <e p="ContBox3.cs" t="Include" />
+            <e p="ContMinBox2.cs" t="Include" />
+            <e p="ContMinCircle2.cs" t="Include" />
+            <e p="TilingUtil.cs" t="Include" />
+          </e>
+          <e p="Core" t="Include">
+            <e p="BufferUtil.cs" t="Include" />
+            <e p="CommandArgumentSet.cs" t="Include" />
+            <e p="DeepCopy.cs" t="Include" />
+            <e p="DijkstraGraphDistance.cs" t="Include" />
+            <e p="DVector.cs" t="Include" />
+            <e p="DVectorArray.cs" t="Include" />
+            <e p="DynamicPriorityQueue.cs" t="Include" />
+            <e p="FileSystemUtils.cs" t="Include" />
+            <e p="g3Interfaces.cs" t="Include" />
+            <e p="g3Iterators.cs" t="Include" />
+            <e p="gParallel.cs" t="Include" />
+            <e p="HashUtil.cs" t="Include" />
+            <e p="HBitArray.cs" t="Include" />
+            <e p="Indexing.cs" t="Include" />
+            <e p="IndexPriorityQueue.cs" t="Include" />
+            <e p="MemoryPool.cs" t="Include" />
+            <e p="ProfileUtil.cs" t="Include" />
+            <e p="ProgressCancel.cs" t="Include" />
+            <e p="RefCountVector.cs" t="Include" />
+            <e p="SafeCollections.cs" t="Include" />
+            <e p="SmallListSet.cs" t="Include" />
+            <e p="Snapping.cs" t="Include" />
+            <e p="SparseList.cs" t="Include" />
+            <e p="TagSet.cs" t="Include" />
+            <e p="Units.cs" t="Include" />
+            <e p="Util.cs" t="Include" />
+            <e p="VectorArray.cs" t="Include" />
+          </e>
+          <e p="curve" t="Include">
+            <e p="Arc2.cs" t="Include" />
+            <e p="ArcLengthParam.cs" t="Include" />
+            <e p="BaseCurve2.cs" t="Include" />
+            <e p="BezierCurve2.cs" t="Include" />
+            <e p="BSplineBasis.cs" t="Include" />
+            <e p="Circle2.cs" t="Include" />
+            <e p="CurveGenerators.cs" t="Include" />
+            <e p="CurveResampler.cs" t="Include" />
+            <e p="CurveSampler2.cs" t="Include" />
+            <e p="CurveUtils.cs" t="Include" />
+            <e p="CurveUtils2.cs" t="Include" />
+            <e p="DCurve3.cs" t="Include" />
+            <e p="DGraph.cs" t="Include" />
+            <e p="DGraph2.cs" t="Include" />
+            <e p="DGraph2Resampler.cs" t="Include" />
+            <e p="DGraph2Util.cs" t="Include" />
+            <e p="DGraph3.cs" t="Include" />
+            <e p="DGraph3Util.cs" t="Include" />
+            <e p="Ellipse2.cs" t="Include" />
+            <e p="EllipseArc2.cs" t="Include" />
+            <e p="GeneralPolygon2d.cs" t="Include" />
+            <e p="Hexagon2.cs" t="Include" />
+            <e p="ICurve.cs" t="Include" />
+            <e p="LaplacianCurveDeformer.cs" t="Include" />
+            <e p="NURBSCurve2.cs" t="Include" />
+            <e p="ParametricCurveSequence2.cs" t="Include" />
+            <e p="PlanarComplex.cs" t="Include" />
+            <e p="PlanarSolid2d.cs" t="Include" />
+            <e p="Polygon2d.cs" t="Include" />
+            <e p="PolygonFont2d.cs" t="Include" />
+            <e p="PolyLine2d.cs" t="Include" />
+            <e p="PolyLine2f.cs" t="Include" />
+            <e p="PolyLine3d.cs" t="Include" />
+            <e p="PolySimplification2.cs" t="Include" />
+            <e p="SculptCurveDeformers.cs" t="Include" />
+            <e p="SimpleCurveDeformers.cs" t="Include" />
+          </e>
+          <e p="distance" t="Include">
+            <e p="Distance.cs" t="Include" />
+            <e p="DistLine2Line2.cs" t="Include" />
+            <e p="DistLine2Segment2.cs" t="Include" />
+            <e p="DistLine3Ray3.cs" t="Include" />
+            <e p="DistLine3Segment3.cs" t="Include" />
+            <e p="DistLine3Triangle3.cs" t="Include" />
+            <e p="DistPoint2Box2.cs" t="Include" />
+            <e p="DistPoint2Circle2.cs" t="Include" />
+            <e p="DistPoint3Circle3.cs" t="Include" />
+            <e p="DistPoint3Cylinder3.cs" t="Include" />
+            <e p="DistPoint3Triangle3.cs" t="Include" />
+            <e p="DistRay3Ray3.cs" t="Include" />
+            <e p="DistRay3Segment3.cs" t="Include" />
+            <e p="DistSegment2Segment2.cs" t="Include" />
+            <e p="DistSegment3Triangle3.cs" t="Include" />
+            <e p="DistTriangle3Triangle3.cs" t="Include" />
+          </e>
+          <e p="geometry3Sharp.asmdef" t="Include" />
+          <e p="implicit" t="Include">
+            <e p="CachingGridImplicit3d.cs" t="Include" />
+            <e p="CachingMeshSDF.cs" t="Include" />
+            <e p="FalloffFunctions.cs" t="Include" />
+            <e p="GridImplicits3d.cs" t="Include" />
+            <e p="Implicit2d.cs" t="Include" />
+            <e p="Implicit3d.cs" t="Include" />
+            <e p="ImplicitFieldSampler3d.cs" t="Include" />
+            <e p="ImplicitOperators.cs" t="Include" />
+            <e p="MarchingQuads.cs" t="Include" />
+          </e>
+          <e p="intersection" t="Include">
+            <e p="Intersector1.cs" t="Include" />
+            <e p="IntrLine2Line2.cs" t="Include" />
+            <e p="IntrLine2Segment2.cs" t="Include" />
+            <e p="IntrLine2Triangle2.cs" t="Include" />
+            <e p="IntrLine3AxisAlignedBox3.cs" t="Include" />
+            <e p="IntrLine3Box3.cs" t="Include" />
+            <e p="IntrRay3AxisAlignedBox3.cs" t="Include" />
+            <e p="IntrRay3Box3.cs" t="Include" />
+            <e p="IntrRay3Triangle3.cs" t="Include" />
+            <e p="IntrSegment2Segment2.cs" t="Include" />
+            <e p="IntrSegment2Triangle2.cs" t="Include" />
+            <e p="IntrSegment3Box3.cs" t="Include" />
+            <e p="IntrTriangle2Triangle2.cs" t="Include" />
+            <e p="IntrTriangle3Triangle3.cs" t="Include" />
+          </e>
+          <e p="io" t="Include">
+            <e p="BinaryG3ReaderWriter.cs" t="Include" />
+            <e p="gSerialization.cs" t="Include" />
+            <e p="MaterialTypes.cs" t="Include" />
+            <e p="MeshIO.cs" t="Include" />
+            <e p="MeshIOUtil.cs" t="Include" />
+            <e p="OBJReader.cs" t="Include" />
+            <e p="OBJWriter.cs" t="Include" />
+            <e p="OFFReader.cs" t="Include" />
+            <e p="OFFWriter.cs" t="Include" />
+            <e p="StandardMeshReader.cs" t="Include" />
+            <e p="StandardMeshWriter.cs" t="Include" />
+            <e p="STLReader.cs" t="Include" />
+            <e p="STLWriter.cs" t="Include" />
+            <e p="SVGWriter.cs" t="Include" />
+          </e>
+          <e p="math" t="Include">
+            <e p="AxisAlignedBox2d.cs" t="Include" />
+            <e p="AxisAlignedBox2f.cs" t="Include" />
+            <e p="AxisAlignedBox2i.cs" t="Include" />
+            <e p="AxisAlignedBox3d.cs" t="Include" />
+            <e p="AxisAlignedBox3f.cs" t="Include" />
+            <e p="AxisAlignedBox3i.cs" t="Include" />
+            <e p="BoundsUtil.cs" t="Include" />
+            <e p="Box2.cs" t="Include" />
+            <e p="Box3.cs" t="Include" />
+            <e p="FastWindingMath.cs" t="Include" />
+            <e p="Frame3f.cs" t="Include" />
+            <e p="IndexTypes.cs" t="Include" />
+            <e p="IndexUtil.cs" t="Include" />
+            <e p="Integrate1d.cs" t="Include" />
+            <e p="Interval1d.cs" t="Include" />
+            <e p="Interval1i.cs" t="Include" />
+            <e p="Line2.cs" t="Include" />
+            <e p="Line3.cs" t="Include" />
+            <e p="MathUtil.cs" t="Include" />
+            <e p="Matrix2d.cs" t="Include" />
+            <e p="Matrix2f.cs" t="Include" />
+            <e p="Matrix3d.cs" t="Include" />
+            <e p="Matrix3f.cs" t="Include" />
+            <e p="MatrixUtil.cs" t="Include" />
+            <e p="Plane3.cs" t="Include" />
+            <e p="PrimalQuery2d.cs" t="Include" />
+            <e p="Quaterniond.cs" t="Include" />
+            <e p="Quaternionf.cs" t="Include" />
+            <e p="Query2.cs" t="Include" />
+            <e p="Query2Integer.cs" t="Include" />
+            <e p="QueryTuple2d.cs" t="Include" />
+            <e p="Ray3.cs" t="Include" />
+            <e p="ScalarMap.cs" t="Include" />
+            <e p="Segment2.cs" t="Include" />
+            <e p="Segment3.cs" t="Include" />
+            <e p="TransformSequence.cs" t="Include" />
+            <e p="TransformSequence2.cs" t="Include" />
+            <e p="Triangle2.cs" t="Include" />
+            <e p="Triangle3.cs" t="Include" />
+            <e p="Vector2d.cs" t="Include" />
+            <e p="Vector2f.cs" t="Include" />
+            <e p="Vector2i.cs" t="Include" />
+            <e p="Vector3d.cs" t="Include" />
+            <e p="Vector3f.cs" t="Include" />
+            <e p="Vector3i.cs" t="Include" />
+            <e p="Vector4d.cs" t="Include" />
+            <e p="Vector4f.cs" t="Include" />
+            <e p="VectorTuple.cs" t="Include" />
+          </e>
+          <e p="mesh" t="Include">
+            <e p="DMesh3.cs" t="Include" />
+            <e p="DMesh3_debug.cs" t="Include" />
+            <e p="DMesh3_edge_operators.cs" t="Include" />
+            <e p="DMesh3Builder.cs" t="Include" />
+            <e p="DMesh3Changes.cs" t="Include" />
+            <e p="DSubmesh3.cs" t="Include" />
+            <e p="DSubmesh3Set.cs" t="Include" />
+            <e p="EdgeLoop.cs" t="Include" />
+            <e p="EdgeLoopRemesher.cs" t="Include" />
+            <e p="EdgeSpan.cs" t="Include" />
+            <e p="FaceGroupOptimizer.cs" t="Include" />
+            <e p="FaceGroupUtil.cs" t="Include" />
+            <e p="IMesh.cs" t="Include" />
+            <e p="MeshCaches.cs" t="Include" />
+            <e p="MeshConstraints.cs" t="Include" />
+            <e p="MeshConstraintUtil.cs" t="Include" />
+            <e p="MeshDecomposition.cs" t="Include" />
+            <e p="MeshEditor.cs" t="Include" />
+            <e p="MeshIndexUtil.cs" t="Include" />
+            <e p="MeshIterators.cs" t="Include" />
+            <e p="MeshMeasurements.cs" t="Include" />
+            <e p="MeshNormals.cs" t="Include" />
+            <e p="MeshPointSets.cs" t="Include" />
+            <e p="MeshRefinerBase.cs" t="Include" />
+            <e p="MeshTransforms.cs" t="Include" />
+            <e p="MeshUtil.cs" t="Include" />
+            <e p="MeshUVSet.cs" t="Include" />
+            <e p="MeshWeights.cs" t="Include" />
+            <e p="NTMesh3.cs" t="Include" />
+            <e p="Reducer.cs" t="Include" />
+            <e p="RegionRemesher.cs" t="Include" />
+            <e p="Remesher.cs" t="Include" />
+            <e p="RemesherPro.cs" t="Include" />
+            <e p="SimpleMesh.cs" t="Include" />
+            <e p="SimpleQuadMesh.cs" t="Include" />
+          </e>
+          <e p="mesh_generators" t="Include">
+            <e p="ArrowGenerators.cs" t="Include" />
+            <e p="BoxGenerators.cs" t="Include" />
+            <e p="CylinderGenerators.cs" t="Include" />
+            <e p="DiscGenerators.cs" t="Include" />
+            <e p="GenCylGenerators.cs" t="Include" />
+            <e p="MarchingCubes.cs" t="Include" />
+            <e p="MarchingCubesPro.cs" t="Include" />
+            <e p="MeshGenerators.cs" t="Include" />
+            <e p="PlaneGenerators.cs" t="Include" />
+            <e p="PointsMeshGenerators.cs" t="Include" />
+            <e p="RevolveGenerator.cs" t="Include" />
+            <e p="SphereGenerators.cs" t="Include" />
+            <e p="TriangulatedPolygonGenerator.cs" t="Include" />
+            <e p="VoxelSurfaceGenerator.cs" t="Include" />
+          </e>
+          <e p="mesh_ops" t="Include">
+            <e p="AutoHoleFill.cs" t="Include" />
+            <e p="LaplacianMeshDeformer.cs" t="Include" />
+            <e p="LaplacianMeshSmoother.cs" t="Include" />
+            <e p="MergeCoincidentEdges.cs" t="Include" />
+            <e p="MeshAssembly.cs" t="Include" />
+            <e p="MeshAutoRepair.cs" t="Include" />
+            <e p="MeshBoolean.cs" t="Include" />
+            <e p="MeshExtrudeFaces.cs" t="Include" />
+            <e p="MeshExtrudeLoop.cs" t="Include" />
+            <e p="MeshExtrudeMesh.cs" t="Include" />
+            <e p="MeshICP.cs" t="Include" />
+            <e p="MeshInsertPolygon.cs" t="Include" />
+            <e p="MeshInsertProjectedPolygon.cs" t="Include" />
+            <e p="MeshInsertUVPolyCurve.cs" t="Include" />
+            <e p="MeshIsoCurves.cs" t="Include" />
+            <e p="MeshIterativeSmooth.cs" t="Include" />
+            <e p="MeshLocalParam.cs" t="Include" />
+            <e p="MeshLoopClosure.cs" t="Include" />
+            <e p="MeshLoopSmooth.cs" t="Include" />
+            <e p="MeshMeshCut.cs" t="Include" />
+            <e p="MeshOps.cs" t="Include" />
+            <e p="MeshPlaneCut.cs" t="Include" />
+            <e p="MeshRepairOrientation.cs" t="Include" />
+            <e p="MeshSpatialSort.cs" t="Include" />
+            <e p="MeshStitchLoops.cs" t="Include" />
+            <e p="MeshTopology.cs" t="Include" />
+            <e p="MeshTrimLoop.cs" t="Include" />
+            <e p="MinimalHoleFill.cs" t="Include" />
+            <e p="PlanarHoleFiller.cs" t="Include" />
+            <e p="PlanarSpansFiller.cs" t="Include" />
+            <e p="RegionOperator.cs" t="Include" />
+            <e p="RemoveDuplicateTriangles.cs" t="Include" />
+            <e p="RemoveOccludedTriangles.cs" t="Include" />
+            <e p="SimpleHoleFiller.cs" t="Include" />
+            <e p="SmoothedHoleFill.cs" t="Include" />
+          </e>
+          <e p="mesh_selection" t="Include">
+            <e p="MeshBoundaryLoops.cs" t="Include" />
+            <e p="MeshConnectedComponents.cs" t="Include" />
+            <e p="MeshEdgeSelection.cs" t="Include" />
+            <e p="MeshFaceSelection.cs" t="Include" />
+            <e p="MeshFacesFromLoop.cs" t="Include" />
+            <e p="MeshRegionBoundaryLoops.cs" t="Include" />
+            <e p="MeshVertexSelection.cs" t="Include" />
+          </e>
+          <e p="Properties" t="Include">
+            <e p="AssemblyInfo.cs" t="Include" />
+          </e>
+          <e p="queries" t="Include">
+            <e p="IntersectionUtil.cs" t="Include" />
+            <e p="MeshQueries.cs" t="Include" />
+            <e p="MeshValidation.cs" t="Include" />
+            <e p="RayIntersection.cs" t="Include" />
+          </e>
+          <e p="shapes3" t="Include">
+            <e p="Circle3.cs" t="Include" />
+            <e p="Cylinder3.cs" t="Include" />
+          </e>
+          <e p="solvers" t="Include">
+            <e p="CholeskyDecomposition.cs" t="Include" />
+            <e p="DenseMatrix.cs" t="Include" />
+            <e p="DenseVector.cs" t="Include" />
+            <e p="FastQuaternionSVD.cs" t="Include" />
+            <e p="IMatrix.cs" t="Include" />
+            <e p="PackedSparseMatrix.cs" t="Include" />
+            <e p="SingularValueDecomposition.cs" t="Include" />
+            <e p="SparseMatrix.cs" t="Include" />
+            <e p="SparseSymmetricCG.cs" t="Include" />
+            <e p="SymmetricEigenSolver.cs" t="Include" />
+          </e>
+          <e p="spatial" t="Include">
+            <e p="BasicIntersectionTargets.cs" t="Include" />
+            <e p="BasicProjectionTargets.cs" t="Include" />
+            <e p="BiGrid3.cs" t="Include" />
+            <e p="Bitmap2.cs" t="Include" />
+            <e p="Bitmap3.cs" t="Include" />
+            <e p="DCurveBoxTree.cs" t="Include" />
+            <e p="DCurveProjection.cs" t="Include" />
+            <e p="DenseGrid2.cs" t="Include" />
+            <e p="DenseGrid3.cs" t="Include" />
+            <e p="DMeshAABBTree.cs" t="Include" />
+            <e p="DSparseGrid3.cs" t="Include" />
+            <e p="EditMeshSpatial.cs" t="Include" />
+            <e p="GridIndexing.cs" t="Include" />
+            <e p="GridIndexing2.cs" t="Include" />
+            <e p="MeshScalarSamplingGrid.cs" t="Include" />
+            <e p="MeshSignedDistanceGrid.cs" t="Include" />
+            <e p="MeshWindingNumberGrid.cs" t="Include" />
+            <e p="NormalHistogram.cs" t="Include" />
+            <e p="PointAABBTree3.cs" t="Include" />
+            <e p="PointHashGrid2d.cs" t="Include" />
+            <e p="PointHashGrid3d.cs" t="Include" />
+            <e p="PointSetHashtable.cs" t="Include" />
+            <e p="Polygon2dBoxTree.cs" t="Include" />
+            <e p="SegmentHashGrid.cs" t="Include" />
+            <e p="SegmentSet2d.cs" t="Include" />
+            <e p="SpatialFunctions.cs" t="Include" />
+            <e p="SpatialInterfaces.cs" t="Include" />
+            <e p="TriangleBinsGrid2d.cs" t="Include" />
+          </e>
+        </e>
+        <e p="JsonDotNet" t="Include">
+          <e p="link.xml" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="NodeBreaker" t="Include">
+            <e p="Core" t="Include">
+              <e p="NodeBreakerCore.cs" t="Include" />
+            </e>
+            <e p="Data" t="Include">
+              <e p="CubeCollider.cs" t="Include" />
+              <e p="Entity.cs" t="Include" />
+              <e p="ICollidable.cs" t="Include" />
+            </e>
+            <e p="Utilities" t="Include">
+              <e p="CollisionDetector.cs" t="Include" />
+              <e p="Helper.cs" t="Include" />
+              <e p="SortingAlgorithm.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="geometry3Sharp.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="wd_sandbox.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

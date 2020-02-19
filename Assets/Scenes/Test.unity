@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.51237714, g: 0.6348634, b: 0.84027255, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -214,15 +214,15 @@ MonoBehaviour:
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
     m_Override: 512
-    m_UseOverride: 1
-    m_Level: 1
+    m_UseOverride: 0
+    m_Level: 3
   m_ShadowDimmer: 1
   m_VolumetricShadowDimmer: 1
   m_ShadowFadeDistance: 10000
   m_UseContactShadow:
     m_Override: 0
-    m_UseOverride: 1
-    m_Level: 0
+    m_UseOverride: 0
+    m_Level: 2
   m_RayTracedContactShadow: 0
   m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1619056099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f45f4d6c2ceb641bdc113b9c77af60, type: 3}
+  m_Script: {fileID: 11500000, guid: c713e6902c183454583722420581d479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Geometry: {fileID: 1815326408}
@@ -455,7 +455,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 65af343082996f94bba94ccbb9677d3d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.44
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 65af343082996f94bba94ccbb9677d3d,
         type: 3}
