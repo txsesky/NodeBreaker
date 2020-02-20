@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\txses\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\txses\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_wd_sandbox.113019042.00" t="ExcludeRecursive" />
+    <e p="C:\Users\sapab\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\sapab\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_wd_sandbox.113019042.00" t="ExcludeRecursive" />
     <e p="D:\Repositories\wd_sandbox" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -370,8 +370,18 @@
         <e p="JsonDotNet" t="Include">
           <e p="link.xml" t="Include" />
         </e>
+        <e p="MathGeoLib" t="Include">
+          <e p="Line3.cs" t="Include" />
+          <e p="Matrix3X4.cs" t="Include" />
+          <e p="OrientedBoundingBox.cs" t="Include" />
+          <e p="Plane.cs" t="Include" />
+          <e p="Vector3.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="NodeBreaker" t="Include">
+            <e p="Components" t="Include">
+              <e p="ChunkGroupId.cs" t="Include" />
+            </e>
             <e p="Core" t="Include">
               <e p="NodeBreakerCore.cs" t="Include" />
             </e>

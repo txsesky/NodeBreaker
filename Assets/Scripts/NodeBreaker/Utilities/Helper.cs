@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using MathGeoLib;
 using Newtonsoft.Json.Linq;
 using NodeBreaker.Data;
 using UnityEngine;
@@ -17,10 +18,14 @@ namespace NodeBreaker.Utilities
             var entities = new List<Entity>();
             var children = new List<GameObject>();
 
-            Traverse(ref children, gameObject.transform);
+            children.Add(gameObject);
 
-            foreach (var nodeName in names)
+            Traverse(ref children, gameObject.transform);
+            
+            for (int i = 0; i < names.Count; i++)
             {
+                var nodeName = names[i];
+                
                 var go = children.FirstOrDefault(item => item.name == nodeName);
                 if (go != null)
                 {
@@ -79,13 +84,16 @@ namespace NodeBreaker.Utilities
             var jObject = JObject.Parse(file);
             var jArray = JArray.Parse(jObject[subPath0][subPath1].ToString());
 
-            foreach (var jToken in jArray)
+            for (int i = 0; i < jArray.Count; i++)
             {
+                var jToken = jArray[i];
+                
                 var jObj = (JObject) jToken;
                 var jArr = JArray.Parse(jObj[subPath2].ToString());
 
-                foreach (var jTok in jArr)
+                for (int j = 0; j < jArr.Count; j++)
                 {
+                    var jTok = jArr[j];
                     var colName = jTok.ToString();
                     names.Add(colName);
                 }
@@ -94,7 +102,7 @@ namespace NodeBreaker.Utilities
             return names;
         }
 
-        private static void Traverse(ref List<GameObject> gameObjects, Transform tr)
+        public static void Traverse(ref List<GameObject> gameObjects, Transform tr)
         {
             if (tr == null)
                 return;
@@ -129,6 +137,69 @@ namespace NodeBreaker.Utilities
 
                 IterateOverChildren(ref entities, child.gameObject);
             }
+        }
+        
+        public static void CreateBoundingCube(OrientedBoundingBox orientedBoundingBox, Color color)
+        {
+            var center = orientedBoundingBox.Center;
+
+            var axisX = orientedBoundingBox.Axis1;
+            var axisY = orientedBoundingBox.Axis2;
+            var axisZ = orientedBoundingBox.Axis3;
+            var extends = orientedBoundingBox.Extent;
+
+            var A = center - extends.z * axisZ - extends.x * axisX - axisY * extends.y;
+            var B = center - extends.z * axisZ + extends.x * axisX - axisY * extends.y;
+            var C = center - extends.z * axisZ + extends.x * axisX + axisY * extends.y;
+            var D = center - extends.z * axisZ - extends.x * axisX + axisY * extends.y;
+
+            var E = center + extends.z * axisZ - extends.x * axisX - axisY * extends.y;
+            var F = center + extends.z * axisZ + extends.x * axisX - axisY * extends.y;
+            var G = center + extends.z * axisZ + extends.x * axisX + axisY * extends.y;
+            var H = center + extends.z * axisZ - extends.x * axisX + axisY * extends.y;
+
+            Debug.DrawLine(A, B, color, Mathf.Infinity);
+            Debug.DrawLine(B, C, color, Mathf.Infinity);
+            Debug.DrawLine(C, D, color, Mathf.Infinity);
+            Debug.DrawLine(D, A, color, Mathf.Infinity);
+
+            Debug.DrawLine(E, F, color, Mathf.Infinity);
+            Debug.DrawLine(F, G, color, Mathf.Infinity);
+            Debug.DrawLine(G, H, color, Mathf.Infinity);
+            Debug.DrawLine(H, E, color, Mathf.Infinity);
+
+            Debug.DrawLine(A, E, color, Mathf.Infinity);
+            Debug.DrawLine(B, F, color, Mathf.Infinity);
+            Debug.DrawLine(D, H, color, Mathf.Infinity);
+            Debug.DrawLine(C, G, color, Mathf.Infinity);
+        }
+        
+        public static void CreateBoundingCube(Vector3[] points, Color color)
+        {
+            var A = points[0];
+            var B = points[1];
+            var C = points[2];
+            var D = points[3];
+            
+            var E = points[4];
+            var F = points[5];
+            var G = points[6];
+            var H = points[7];
+            
+            Debug.DrawLine(A, B, color, Mathf.Infinity);
+            Debug.DrawLine(B, C, color, Mathf.Infinity);
+            Debug.DrawLine(C, D, color, Mathf.Infinity);
+            Debug.DrawLine(D, A, color, Mathf.Infinity);
+
+            Debug.DrawLine(E, F, color, Mathf.Infinity);
+            Debug.DrawLine(F, G, color, Mathf.Infinity);
+            Debug.DrawLine(G, H, color, Mathf.Infinity);
+            Debug.DrawLine(H, E, color, Mathf.Infinity);
+
+            Debug.DrawLine(A, E, color, Mathf.Infinity);
+            Debug.DrawLine(B, F, color, Mathf.Infinity);
+            Debug.DrawLine(D, H, color, Mathf.Infinity);
+            Debug.DrawLine(C, G, color, Mathf.Infinity);
         }
     }
 }

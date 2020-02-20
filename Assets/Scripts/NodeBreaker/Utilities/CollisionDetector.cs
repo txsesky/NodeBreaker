@@ -28,9 +28,9 @@ namespace NodeBreaker.Utilities
             int bVertsLength = bVertices.Length;
 
             bool hasOverlap = ProjectionHasOverlap(aAxesLength, ref aAxes, bVertsLength,
-                ref bVertices, aVertsLength, ref aVertices, Color.red, Color.green);
+                ref bVertices, aVertsLength, ref aVertices);
             hasOverlap = ProjectionHasOverlap(bAxesLength, ref bAxes, aVertsLength,
-                             ref aVertices, bVertsLength, ref bVertices, Color.green, Color.red) && hasOverlap;
+                             ref aVertices, bVertsLength, ref bVertices) && hasOverlap;
 
             return hasOverlap;
         }
@@ -57,9 +57,7 @@ namespace NodeBreaker.Utilities
             int bVertsLength,
             ref Vector3[] bVertices,
             int aVertsLength,
-            ref Vector3[] aVertices,
-            Color aColor,
-            Color bColor)
+            ref Vector3[] aVertices)
         {
             bool hasOverlap = true;
 

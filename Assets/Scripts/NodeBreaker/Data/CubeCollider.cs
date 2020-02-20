@@ -22,5 +22,10 @@ namespace NodeBreaker.Data
 
             this.center = center;
         }
+
+        public void Encapsulate()
+        {
+            
+        }
     }
 }
