@@ -54,14 +54,59 @@ namespace NodeBreaker.Core
         {
             var enta = new Entity {gameObject = m_GeometryCheck};
             var list = Helper.GetChildrenWithMesh(enta);
+            //enta.composedCubeCollider = GetComposedCubeCollider(list, Color.cyan);
 
+            var points = new List<Vector3>();
+            
             for (int i = 0; i < list.Count; i++)
             {
-                var e = list[i];
-                e.singleCubeCollider = GetSingleCubeCollider(e);
-                //CalcucalteSingleOBB(ref e);
-                list[i] = e;
+                var entity = list[i];
+
+                var localToWorldMatrix = entity.gameObject.transform.localToWorldMatrix;
+                var bounds = (entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds);
+
+                var min = bounds.min;
+                var max = bounds.max;
+
+                var A = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, min.z));
+                var B = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, min.z));
+                var C = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, min.z));
+                var D = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, min.z));
+
+                var E = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, max.z));
+                var F = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, max.z));
+                var G = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, max.z));
+                var H = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, max.z));
+
+                points.Add(A);
+                points.Add(B);
+                points.Add(C);
+                points.Add(D);
+                points.Add(E);
+                points.Add(F);
+                points.Add(G);
+                points.Add(H);
             }
+
+            var orientedBoundingBox = OrientedBoundingBox.OptimalEnclosing(points.ToArray());
+            
+            if (float.IsInfinity(orientedBoundingBox.Extent.x) || float.IsInfinity(orientedBoundingBox.Extent.y) ||
+                float.IsInfinity(orientedBoundingBox.Extent.z) || float.IsInfinity(orientedBoundingBox.Center.x) || 
+                float.IsInfinity(orientedBoundingBox.Center.y) || float.IsInfinity(orientedBoundingBox.Center.z) || 
+                float.IsInfinity(orientedBoundingBox.Axis1.x) || float.IsInfinity(orientedBoundingBox.Axis1.y) || 
+                float.IsInfinity(orientedBoundingBox.Axis1.z)|| float.IsInfinity(orientedBoundingBox.Axis2.x) || 
+                float.IsInfinity(orientedBoundingBox.Axis2.y) || float.IsInfinity(orientedBoundingBox.Axis2.z)|| 
+                float.IsInfinity(orientedBoundingBox.Axis3.x) || float.IsInfinity(orientedBoundingBox.Axis3.y) || 
+                float.IsInfinity(orientedBoundingBox.Axis3.z))
+            {
+                print("is nan");
+                orientedBoundingBox = OrientedBoundingBox.BruteEnclosing(points.ToArray());
+            }
+
+            Helper.CreateBoundingCube(orientedBoundingBox, Color.cyan);
+            
+            Debug.Log($"{orientedBoundingBox.Extent}");
+
         }
 
         private void Initialize()
@@ -77,7 +122,7 @@ namespace NodeBreaker.Core
                     Helper.GetEntitiesMatchingName(Path.Combine(Application.streamingAssetsPath, "config.json"),
                         "atlas", "table", "colName", m_Geometry);
 
-                print($"Entities matching name count = {entitiesMatchingName.Count}");
+                //print($"Entities matching name count = {entitiesMatchingName.Count}");
 
                 var movableChunks = GetMovableChunks(entitiesMatchingName);
 
@@ -88,9 +133,7 @@ namespace NodeBreaker.Core
                         var entity = movableChunks[i][j];
                         var children = Helper.GetChildrenWithMesh(entity);
 
-                        entity.composedCubeCollider = GetComposedCubeCollider(children, Color.blue);//TODO uznat pochemu u 1_12 i 1_6 0.0.0 center
-
-                        //Debug.Log(entity.gameObject.name, entity.gameObject);
+                        entity.composedCubeCollider = GetComposedCubeCollider(children, Color.blue);
 
                         CalculateDirectionAndDistance(ref entity, m_ChunksBases[i].centerOfMass);
 
@@ -99,13 +142,12 @@ namespace NodeBreaker.Core
 
                     var entities = movableChunks[i];
                     SortMovableEntitiesInOrder(ref entities);
-                    //CalculateDesiredPosition(ref entities, m_ChunksBases[i]);
+                    CalculateDesiredPosition(ref entities, m_ChunksBases[i]);
                     movableChunks[i] = entities;
                 }
 
                 StopAllCoroutines();
-                var list = movableChunks;
-                StartCoroutine(DrawLines(list));
+                StartCoroutine(DrawLines(movableChunks));
 
                 m_Initialized = true;
             }
@@ -173,12 +215,12 @@ namespace NodeBreaker.Core
             }
 
 
-            print($"Movable chunks count {movableChunks.Count.ToString()}");
+            //print($"Movable chunks count {movableChunks.Count.ToString()}");
 
-            for (int i = 0; i < movableChunks.Count; i++)
+            /*for (int i = 0; i < movableChunks.Count; i++)
             {
                 print($"Movable chunk {i} has {movableChunks[i].Count.ToString()} elements");
-            }
+            }*/
 
             return movableChunks;
         }
@@ -315,7 +357,7 @@ namespace NodeBreaker.Core
         private CubeCollider GetSingleCubeCollider(Entity entity)
         {
             var localToWorldMatrix = entity.gameObject.transform.localToWorldMatrix;
-            var bounds = (entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds);
+            var bounds = entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds;
 
             var center = localToWorldMatrix.MultiplyPoint3x4(bounds.center);
 
@@ -355,39 +397,48 @@ namespace NodeBreaker.Core
         {
             var points = new List<Vector3>();
 
-            for (int i = 0; i < entities.Count; i++)
+            if (entities.Count > 1)
             {
-                var entity = entities[i];
+                for (int i = 0; i < entities.Count; i++)
+                {
+                    var entity = entities[i];
 
+                    var localToWorldMatrix = entity.gameObject.transform.localToWorldMatrix;
+                    var bounds = (entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds);
 
-                var localToWorldMatrix = entity.gameObject.transform.localToWorldMatrix;
-                var bounds = (entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds);
+                    var min = bounds.min;
+                    var max = bounds.max;
 
-                var min = bounds.min;
-                var max = bounds.max;
+                    var A = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, min.z));
+                    var B = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, min.z));
+                    var C = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, min.z));
+                    var D = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, min.z));
 
-                var A = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, min.z));
-                var B = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, min.z));
-                var C = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, min.z));
-                var D = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, min.z));
+                    var E = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, max.z));
+                    var F = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, max.z));
+                    var G = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, max.z));
+                    var H = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, max.z));
 
-                var E = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, max.z));
-                var F = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, max.z));
-                var G = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, max.z));
-                var H = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, max.z));
-
-                points.Add(A);
-                points.Add(B);
-                points.Add(C);
-                points.Add(D);
-                points.Add(E);
-                points.Add(F);
-                points.Add(G);
-                points.Add(H);
+                    points.Add(A);
+                    points.Add(B);
+                    points.Add(C);
+                    points.Add(D);
+                    points.Add(E);
+                    points.Add(F);
+                    points.Add(G);
+                    points.Add(H);
+                }
+                
+                var orientedBoundingBox = OrientedBoundingBox.OptimalEnclosing(points.ToArray());
+            
+            if (float.IsInfinity(orientedBoundingBox.Extent.x) || float.IsInfinity(orientedBoundingBox.Extent.y) ||
+                float.IsInfinity(orientedBoundingBox.Extent.z) || float.IsInfinity(orientedBoundingBox.Center.x) || 
+                float.IsInfinity(orientedBoundingBox.Center.y) || float.IsInfinity(orientedBoundingBox.Center.z))
+            {
+                print("is nan");
+                orientedBoundingBox = OrientedBoundingBox.BruteEnclosing(points.ToArray());
             }
-
-            var orientedBoundingBox = OrientedBoundingBox.OptimalEnclosing(points.ToArray());
-
+            
             Helper.CreateBoundingCube(orientedBoundingBox, color);
 
             var obbCenter = orientedBoundingBox.Center;
@@ -418,6 +469,11 @@ namespace NodeBreaker.Core
             };
 
             return new CubeCollider(axes, composedPoints, obbCenter);
+            }
+            else
+            {
+                return GetSingleCubeCollider(entities[0]);
+            }
         }
 
         private CubeCollider GetComposedCubeColliderFromCollider(List<Entity> entities, Color color)
@@ -614,7 +670,10 @@ namespace NodeBreaker.Core
 
         private void CalculateDesiredPosition(ref List<Entity> entities, Entity baseEntity)
         {
-            throw new NotImplementedException();
+            foreach (var entity in entities)
+            {
+                
+            }
         }
 
         private bool IsOverlapOrNear(Entity one, Entity two)
@@ -684,7 +743,7 @@ namespace NodeBreaker.Core
                         entity.desiredDirection * (entity.distanceFromBaseCenter + 5),
                         Color.yellow,
                         Mathf.Infinity);
-                    Debug.Log(entity.composedCubeCollider.center, entity.gameObject);
+                    //Debug.Log(entity.gameObject.name + " " + entity.composedCubeCollider.center + " ", entity.gameObject);
                 }
             }
         }
