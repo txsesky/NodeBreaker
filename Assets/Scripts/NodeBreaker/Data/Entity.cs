@@ -23,5 +23,8 @@ namespace NodeBreaker.Data
         public List<int> otherIds { get; set; }
         public int chunkGroup { get; set; }
         public bool hasGroup { get; set; }
+        public float scalarSize { get; set; }
+        public Vector3 baseMin { get; set; }
+        public Vector3 baseMax { get; set; }
     }
 }

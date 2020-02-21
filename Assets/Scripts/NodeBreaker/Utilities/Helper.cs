@@ -174,6 +174,34 @@ namespace NodeBreaker.Utilities
             Debug.DrawLine(C, G, color, Mathf.Infinity);
         }
         
+        public static void CreateBoundingCube(CubeCollider cubeCollider, Color color)
+        {
+            var A = cubeCollider.vertices[0];
+            var B = cubeCollider.vertices[1];
+            var C = cubeCollider.vertices[2];
+            var D = cubeCollider.vertices[3];
+
+            var E = cubeCollider.vertices[4];
+            var F = cubeCollider.vertices[5];
+            var G = cubeCollider.vertices[6];
+            var H = cubeCollider.vertices[7];
+
+            Debug.DrawLine(A, B, color, Mathf.Infinity);
+            Debug.DrawLine(B, C, color, Mathf.Infinity);
+            Debug.DrawLine(C, D, color, Mathf.Infinity);
+            Debug.DrawLine(D, A, color, Mathf.Infinity);
+
+            Debug.DrawLine(E, F, color, Mathf.Infinity);
+            Debug.DrawLine(F, G, color, Mathf.Infinity);
+            Debug.DrawLine(G, H, color, Mathf.Infinity);
+            Debug.DrawLine(H, E, color, Mathf.Infinity);
+
+            Debug.DrawLine(A, E, color, Mathf.Infinity);
+            Debug.DrawLine(B, F, color, Mathf.Infinity);
+            Debug.DrawLine(D, H, color, Mathf.Infinity);
+            Debug.DrawLine(C, G, color, Mathf.Infinity);
+        }
+        
         public static void CreateBoundingCube(Vector3[] points, Color color)
         {
             var A = points[0];
