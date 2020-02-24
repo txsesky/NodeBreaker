@@ -383,6 +383,7 @@
               <e p="ChunkGroupId.cs" t="Include" />
             </e>
             <e p="Core" t="Include">
+              <e p="GeometryMath.cs" t="Include" />
               <e p="NodeBreakerCore.cs" t="Include" />
             </e>
             <e p="Data" t="Include">
