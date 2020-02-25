@@ -7,6 +7,8 @@ namespace NodeBreaker.Data
         public Vector3[] axes { get; private set; }
         public Vector3[] vertices { get; private set; }
         public Vector3 center { get; private set; }
+        
+        public Vector3 extents { get; private set; }
 
         /// <summary>
         /// Constructor. Wraps a GameObject with a cube collision implementation.
@@ -14,13 +16,15 @@ namespace NodeBreaker.Data
         /// <param name="axes"></param>
         /// <param name="vertices"></param>
         /// <param name="center"></param>
-        public CubeCollider(Vector3[] axes, Vector3[] vertices, Vector3 center)
+        public CubeCollider(Vector3[] axes, Vector3[] vertices, Vector3 center, Vector3 extents)
         {
             this.axes = axes;
 
             this.vertices = vertices;
 
             this.center = center;
+
+            this.extents = extents;
         }
 
         public void Encapsulate()

@@ -13,6 +13,7 @@ namespace NodeBreaker.Core
     public class NodeBreakerCore : MonoBehaviour
     {
         [SerializeField] private GameObject m_Geometry;
+        [SerializeField] private GameObject m_Parent;
 
         private List<List<Entity>> m_Chunks = new List<List<Entity>>();
         private List<Entity> m_ChunksBases = new List<Entity>();
@@ -37,7 +38,7 @@ namespace NodeBreaker.Core
             {
                 var time = Time.realtimeSinceStartup;
                 Disassemble();
-                print(Time.realtimeSinceStartup - time);
+                print(message: Time.realtimeSinceStartup - time);
             }
 
             if (GUI.Button(new Rect(0, 302, 300, 150), "Assemble", customButton))
@@ -57,15 +58,16 @@ namespace NodeBreaker.Core
                 m_Chunks = GetGroupedChunks(m_Geometry);
                 m_ChunksBases = GetChunksBases(m_Chunks);
 
-                for (int i = 0; i < m_ChunksBases.Count; i++)
+                /*for (int i = 0; i < m_ChunksBases.Count; i++)
                 {
                     Helper.CreateBoundingCube(m_ChunksBases[i].composedCubeCollider, Color.red);
-                }
+                }*/
 
                 CalculateCenterOfMass(ref m_ChunksBases, m_Chunks);
 
                 var entitiesMatchingName =
-                    Helper.GetEntitiesMatchingName(Path.Combine(Application.streamingAssetsPath, "config.json"),
+                    Helper.GetEntitiesMatchingName(
+                        Path.Combine(Application.streamingAssetsPath, m_Parent.name + "/config.json"),
                         "atlas", "table", "colName", m_Geometry);
 
                 var movableChunks = GetMovableChunks(entitiesMatchingName);
@@ -85,7 +87,7 @@ namespace NodeBreaker.Core
                     }
 
                     var entities = movableChunks[i];
-                    SortMovableEntitiesInOrder(ref entities);
+                    //SortMovableEntitiesInOrder(ref entities);
                     var baseE = m_ChunksBases[i];
                     CalculateBaseMinMax(m_Geometry.transform, ref baseE);
                     m_ChunksBases[i] = baseE;
@@ -193,8 +195,9 @@ namespace NodeBreaker.Core
             if (o == null)
                 return;
 
-            foreach (Transform child in o.transform)
+            for (int i = 0; i < o.transform.childCount; i++)
             {
+                var child = o.transform.GetChild(i);
                 if (child == null)
                     continue;
 
@@ -312,7 +315,7 @@ namespace NodeBreaker.Core
 
 
         private CubeCollider GetSingleCubeCollider(Entity entity)
-        {
+        { 
             var localToWorldMatrix = entity.gameObject.transform.localToWorldMatrix;
             var bounds = entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds;
 
@@ -344,7 +347,48 @@ namespace NodeBreaker.Core
                 A, B, C, D, E, F, G, H
             };
 
-            return new CubeCollider(axes, points, center);
+            return new CubeCollider(axes, points, center, Vector3.zero);
+        }
+
+        public static CubeCollider TransformBounds(Transform _transform, Bounds _localBounds)
+        {
+            var center = _transform.TransformPoint(_localBounds.center);
+
+            // transform the local extents' axes
+            var extents = _localBounds.extents;
+
+            var axisX = _transform.TransformVector(extents.x, 0, 0);
+            var axisY = _transform.TransformVector(0, extents.y, 0);
+            var axisZ = _transform.TransformVector(0, 0, extents.z);
+
+            var axes = new[]
+            {
+                axisX, axisY, axisZ
+            };
+
+            // sum their absolute value to get the world extents
+            extents.x = Mathf.Abs(axisX.x) + Mathf.Abs(axisY.x) + Mathf.Abs(axisZ.x);
+            extents.y = Mathf.Abs(axisX.y) + Mathf.Abs(axisY.y) + Mathf.Abs(axisZ.y);
+            extents.z = Mathf.Abs(axisX.z) + Mathf.Abs(axisY.z) + Mathf.Abs(axisZ.z);
+
+            var min = center - extents;
+            var max = center + extents;
+
+            var A = new Vector3(min.x, min.y, min.z);
+            var B = new Vector3(max.x, min.y, min.z);
+            var C = new Vector3(max.x, max.y, min.z);
+            var D = new Vector3(min.x, max.y, min.z);
+            var E = new Vector3(min.x, min.y, max.z);
+            var F = new Vector3(max.x, min.y, max.z);
+            var G = new Vector3(max.x, max.y, max.z);
+            var H = new Vector3(min.x, max.y, max.z);
+
+            var points = new[]
+            {
+                A, B, C, D, E, F, G, H
+            };
+            
+            return new CubeCollider(axes, points, center, extents);
         }
 
         private CubeCollider GetComposedCubeCollider(List<Entity> entities)
@@ -419,10 +463,54 @@ namespace NodeBreaker.Core
                     I, J, K, L, M, N, O, P
                 };
 
-                return new CubeCollider(axes, composedPoints, obbCenter);
+                return new CubeCollider(axes, composedPoints, obbCenter, Vector3.zero);
             }
 
             return GetSingleCubeCollider(entities[0]);
+
+           /* TransformBounds(entities[0].gameObject.transform,
+                entities[0].gameObject.GetComponent<MeshFilter>().sharedMesh.bounds);
+
+            var center = 
+
+            var size = 
+
+            var bounds = new Bounds(center, size);
+
+            for (int i = 1; i < entities.Count; i++)
+            {
+                var centerI = entities[i].gameObject.transform
+                    .TransformPoint(entities[i].gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.center);
+
+                var sizeI = Vector3.Scale(entities[i].gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.center,
+                    entities[i].gameObject.transform.localToWorldMatrix.lossyScale);
+
+                var boundsI = new Bounds(center, size);
+                
+                bounds.Encapsulate(boundsI);
+            }
+
+            center = bounds.center;
+            var extents = bounds.extents;
+            
+            var min = center - extents;
+            var max = center + extents;
+
+            var A = new Vector3(min.x, min.y, min.z);
+            var B = new Vector3(max.x, min.y, min.z);
+            var C = new Vector3(max.x, max.y, min.z);
+            var D = new Vector3(min.x, max.y, min.z);
+            var E = new Vector3(min.x, min.y, max.z);
+            var F = new Vector3(max.x, min.y, max.z);
+            var G = new Vector3(max.x, max.y, max.z);
+            var H = new Vector3(min.x, max.y, max.z);
+
+            var points = new[]
+            {
+                A, B, C, D, E, F, G, H
+            };
+
+            return new CubeCollider(,points,);*/
         }
 
         private CubeCollider GetComposedCubeColliderFromCollider(List<Entity> entities)
@@ -472,7 +560,7 @@ namespace NodeBreaker.Core
                 I, J, K, L, M, N, O, P
             };
 
-            return new CubeCollider(axes, composedPoints, obbCenter);
+            return new CubeCollider(axes, composedPoints, obbCenter, Vector3.zero);
         }
 
         private void CalculateCenterOfMass(ref List<Entity> chunksBases, List<List<Entity>> chunks)
@@ -700,12 +788,12 @@ namespace NodeBreaker.Core
 
         private void CalculateDesiredPosition(ref List<Entity> entities, Entity baseEntity)
         {
-            float m_IterSizeX = 1f;
-            float m_IterSizeY = 1f;
-            float m_IterSizeZ = 1f;
-            float m_IterSizeNegX = 1f;
-            float m_IterSizeNegY = 1f;
-            float m_IterSizeNegZ = 1f;
+            float iterSizeX = 0f;
+            float iterSizeY = 0f;
+            float iterSizeZ = 0f;
+            float iterSizeNegX = 0f;
+            float iterSizeNegY = 0f;
+            float iterSizeNegZ = 0f;
 
             for (int i = 0; i < entities.Count; i++)
             {
@@ -732,52 +820,53 @@ namespace NodeBreaker.Core
                     }
                 }
 
-                var position = Mathf.Sign(Vector3.Dot(entity.gameObject.transform.position, dir)) *
-                               Vector3.Project(entity.gameObject.transform.position, dir).magnitude;
+                var transformPosition = entity.gameObject.transform.position;
+                var magnitude = Mathf.Sign(Vector3.Dot(transformPosition, dir)) *
+                                Vector3.Project(transformPosition, dir).magnitude;
 
                 var additionalSpace = 0.2f;
 
-                var cenToSelfEdge = position - min + additionalSpace / 2;
+                var cenToSelfEdge = magnitude - min + additionalSpace / 2;
                 var size = max - min + additionalSpace;
 
                 var cenToBaseEdge = 0f;
                 var compDist = 0f;
-                
+
                 if (entity.desiredDirectionAxis == "x")
                 {
-                    cenToBaseEdge = baseEntity.baseMax.x - position;
-                    compDist = cenToSelfEdge + cenToBaseEdge + m_IterSizeX;
-                    m_IterSizeX += size;
+                    cenToBaseEdge = baseEntity.baseMax.x - magnitude;
+                    compDist = cenToSelfEdge + cenToBaseEdge + iterSizeX;
+                    iterSizeX += size;
                 }
                 else if (entity.desiredDirectionAxis == "-x")
                 {
-                    cenToBaseEdge = -baseEntity.baseMin.x - position;
-                    compDist = cenToSelfEdge + cenToBaseEdge + m_IterSizeNegX;
-                    m_IterSizeNegX += size;
+                    cenToBaseEdge = -baseEntity.baseMin.x - magnitude;
+                    compDist = cenToSelfEdge + cenToBaseEdge + iterSizeNegX;
+                    iterSizeNegX += size;
                 }
                 else if (entity.desiredDirectionAxis == "y")
                 {
-                    cenToBaseEdge = baseEntity.baseMax.y - position;
-                    compDist = cenToSelfEdge + cenToBaseEdge + m_IterSizeY;
-                    m_IterSizeY += size;
+                    cenToBaseEdge = baseEntity.baseMax.y - magnitude;
+                    compDist = cenToSelfEdge + cenToBaseEdge + iterSizeY;
+                    iterSizeY += size;
                 }
                 else if (entity.desiredDirectionAxis == "-y")
                 {
-                    cenToBaseEdge = -baseEntity.baseMin.y - position;
-                    compDist = cenToSelfEdge + cenToBaseEdge + m_IterSizeNegY;
-                    m_IterSizeNegY += size;
+                    cenToBaseEdge = -baseEntity.baseMin.y - magnitude;
+                    compDist = cenToSelfEdge + cenToBaseEdge + iterSizeNegY;
+                    iterSizeNegY += size;
                 }
                 else if (entity.desiredDirectionAxis == "z")
                 {
-                    cenToBaseEdge = baseEntity.baseMax.z - position;
-                    compDist = cenToSelfEdge + cenToBaseEdge + m_IterSizeZ;
-                    m_IterSizeZ += size;
+                    cenToBaseEdge = baseEntity.baseMax.z - magnitude;
+                    compDist = cenToSelfEdge + cenToBaseEdge + iterSizeZ;
+                    iterSizeZ += size;
                 }
                 else if (entity.desiredDirectionAxis == "-z")
                 {
-                    cenToBaseEdge = -baseEntity.baseMin.z - position;
-                    compDist = cenToSelfEdge + cenToBaseEdge + m_IterSizeNegZ;
-                    m_IterSizeNegZ += size;
+                    cenToBaseEdge = -baseEntity.baseMin.z - magnitude;
+                    compDist = cenToSelfEdge + cenToBaseEdge + iterSizeNegZ;
+                    iterSizeNegZ += size;
                 }
 
                 entity.desiredPosition = entity.gameObject.transform.position + compDist * dir;
@@ -796,7 +885,7 @@ namespace NodeBreaker.Core
             StopAllCoroutines();
             foreach (var chunk in m_Chunks)
             {
-                StartCoroutine(MoveEntities(chunk));
+                StartCoroutine(routine: MoveEntities(chunk));
             }
         }
 

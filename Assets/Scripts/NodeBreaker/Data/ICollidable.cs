@@ -18,5 +18,7 @@ namespace NodeBreaker.Data
         /// Center of the collider.
         /// </summary>
         Vector3 center { get; }
+
+        Vector3 extents { get; }
     }
 }

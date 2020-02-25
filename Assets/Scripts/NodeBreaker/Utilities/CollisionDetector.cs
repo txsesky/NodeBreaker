@@ -12,8 +12,8 @@ namespace NodeBreaker.Utilities
         /// <param name="b"></param>
         /// <returns></returns>
         public static bool IsOverlap(
-            ICollidable a,
-            ICollidable b)
+            CubeCollider a,
+            CubeCollider b)
         {
             Vector3[] aAxes = a.axes;
             Vector3[] bAxes = b.axes;

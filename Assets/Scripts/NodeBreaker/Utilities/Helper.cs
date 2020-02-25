@@ -45,7 +45,7 @@ namespace NodeBreaker.Utilities
             return entities;
         }
 
-        public static List<Entity> GetChildrenWithMesh(GameObject baseObject)
+        public static List<Entity> GetChildrenWithMesh(in GameObject baseObject)
         {
             var entities = new List<Entity>();
 
@@ -107,8 +107,9 @@ namespace NodeBreaker.Utilities
             if (tr == null)
                 return;
 
-            foreach (Transform child in tr)
+            for (int i = 0; i < tr.childCount; i++)
             {
+                var child = tr.transform.GetChild(i);
                 gameObjects.Add(child.gameObject);
                 Traverse(ref gameObjects, child);
             }
@@ -124,8 +125,10 @@ namespace NodeBreaker.Utilities
                 return;
             }
 
-            foreach (Transform child in baseObject.transform)
+            for (int i = 0; i < baseObject.transform.childCount; i++)
             {
+                var child = baseObject.transform.GetChild(i);
+                
                 if (child == null)
                     continue;
 

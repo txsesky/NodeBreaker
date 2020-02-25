@@ -1,0 +1,5179 @@
+{
+    "unitCode": "59",
+    "version": "2019.1",
+    "createdDate": "2019-07-17 11:42:03",
+    "modifiedDate": "2019-12-05 12:52:23",
+    "author": "Alexander Mazurenko",
+    "name": [
+        {
+            "ru": "Песочная система ТЭ25КМ"
+        },
+        {
+            "en": "Песочная система ТЭ25КМ"
+        },
+        {
+            "kk": "Песочная система ТЭ25КМ"
+        },
+        {
+            "lt": "Песочная система ТЭ25КМ"
+        }
+    ],
+    "description": [
+        {
+            "ru": null
+        },
+        {
+            "en": null
+        },
+        {
+            "kk": null
+        },
+        {
+            "lt": null
+        }
+    ],
+    "locationId": "000-Atlas1",
+    "locationModeId": "Depo",
+    "category": [
+        {
+            "ru": "Тепловозы"
+        },
+        {
+            "en": "Тепловозы"
+        },
+        {
+            "kk": "Тепловозы"
+        },
+        {
+            "lt": "Тепловозы"
+        }
+    ],
+    "status": [
+        {
+            "ru": "Узел готов"
+        },
+        {
+            "en": "Узел готов"
+        },
+        {
+            "kk": "Узел готов"
+        },
+        {
+            "lt": "Узел готов"
+        }
+    ],
+    "isCompleted": "true",
+    "isModelingCompleted": "false",
+    "atlas": {
+        "animationStartTime": "0",
+        "animationEndTime": "6",
+        "table": [
+            {
+                "colName": [
+                    "01"
+                ],
+                "name": [
+                    {
+                        "ru": "клапан электромагнитный КЭО15"
+                    },
+                    {
+                        "en": "клапан электромагнитный КЭО15"
+                    },
+                    {
+                        "kk": "клапан электромагнитный КЭО15"
+                    },
+                    {
+                        "lt": "клапан электромагнитный КЭО15"
+                    }
+                ],
+                "description": [
+                    {
+                        "ru": null
+                    },
+                    {
+                        "en": null
+                    },
+                    {
+                        "kk": null
+                    },
+                    {
+                        "lt": null
+                    }
+                ],
+                "hide_mesh_renderer": "0"
+            },
+            {
+                "colName": [
+                    "02"
+                ],
+                "name": [
+                    {
+                        "ru": "кран 4302У1 (разобщительный)"
+                    },
+                    {
+                        "en": "кран 4302У1 (разобщительный)"
+                    },
+                    {
+                        "kk": "кран 4302У1 (разобщительный)"
+                    },
+                    {
+                        "lt": "кран 4302У1 (разобщительный)"
+                    }
+                ],
+                "description": [
+                    {
+                        "ru": null
+                    },
+                    {
+                        "en": null
+                    },
+                    {
+                        "kk": null
+                    },
+                    {
+                        "lt": null
+                    }
+                ],
+                "hide_mesh_renderer": "0"
+            },
+            {
+                "colName": [
+                    "04"
+                ],
+                "name": [
+                    {
+                        "ru": "форсунка песочница"
+                    },
+                    {
+                        "en": "форсунка песочница"
+                    },
+                    {
+                        "kk": "форсунка песочница"
+                    },
+                    {
+                        "lt": "форсунка песочница"
+                    }
+                ],
+                "description": [
+                    {
+                        "ru": null
+                    },
+                    {
+                        "en": null
+                    },
+                    {
+                        "kk": null
+                    },
+                    {
+                        "lt": null
+                    }
+                ],
+                "hide_mesh_renderer": "0"
+            },
+            {
+                "colName": [
+                    "05"
+                ],
+                "name": [
+                    {
+                        "ru": "песочные бункеры"
+                    },
+                    {
+                        "en": "песочные бункеры"
+                    },
+                    {
+                        "kk": "песочные бункеры"
+                    },
+                    {
+                        "lt": "песочные бункеры"
+                    }
+                ],
+                "description": [
+                    {
+                        "ru": "передние и задние"
+                    },
+                    {
+                        "en": null
+                    },
+                    {
+                        "kk": null
+                    },
+                    {
+                        "lt": null
+                    }
+                ],
+                "hide_mesh_renderer": "0"
+            },
+            {
+                "colName": [
+                    "036"
+                ],
+                "name": [
+                    {
+                        "ru": "воздухопровод"
+                    },
+                    {
+                        "en": "воздухопровод"
+                    },
+                    {
+                        "kk": "воздухопровод"
+                    },
+                    {
+                        "lt": "воздухопровод"
+                    }
+                ],
+                "description": [
+                    {
+                        "ru": null
+                    },
+                    {
+                        "en": null
+                    },
+                    {
+                        "kk": null
+                    },
+                    {
+                        "lt": null
+                    }
+                ],
+                "hide_mesh_renderer": "0"
+            },
+            {
+                "colName": [
+                    "06"
+                ],
+                "name": [
+                    {
+                        "ru": "песочные трубы"
+                    },
+                    {
+                        "en": "песочные трубы"
+                    },
+                    {
+                        "kk": "песочные трубы"
+                    },
+                    {
+                        "lt": "песочные трубы"
+                    }
+                ],
+                "description": [
+                    {
+                        "ru": null
+                    },
+                    {
+                        "en": null
+                    },
+                    {
+                        "kk": null
+                    },
+                    {
+                        "lt": null
+                    }
+                ],
+                "hide_mesh_renderer": "0"
+            },
+            {
+                "colName": [
+                    "07"
+                ],
+                "name": [
+                    {
+                        "ru": "гибкие рукава"
+                    },
+                    {
+                        "en": "гибкие рукава"
+                    },
+                    {
+                        "kk": "гибкие рукава"
+                    },
+                    {
+                        "lt": "гибкие рукава"
+                    }
+                ],
+                "description": [
+                    {
+                        "ru": null
+                    },
+                    {
+                        "en": null
+                    },
+                    {
+                        "kk": null
+                    },
+                    {
+                        "lt": null
+                    }
+                ],
+                "hide_mesh_renderer": "0"
+            },
+            {
+                "colName": [
+                    "08"
+                ],
+                "name": [
+                    {
+                        "ru": "педаль подачи аеска"
+                    },
+                    {
+                        "en": "педаль подачи аеска"
+                    },
+                    {
+                        "kk": "педаль подачи аеска"
+                    },
+                    {
+                        "lt": "педаль подачи аеска"
+                    }
+                ],
+                "description": [
+                    {
+                        "ru": null
+                    },
+                    {
+                        "en": null
+                    },
+                    {
+                        "kk": null
+                    },
+                    {
+                        "lt": null
+                    }
+                ],
+                "hide_mesh_renderer": "0"
+            },
+            {
+                "colName": [
+                    "09"
+                ],
+                "name": [
+                    {
+                        "ru": "наконечник песочной трубы"
+                    },
+                    {
+                        "en": "наконечник песочной трубы"
+                    },
+                    {
+                        "kk": "наконечник песочной трубы"
+                    },
+                    {
+                        "lt": "наконечник песочной трубы"
+                    }
+                ],
+                "description": [
+                    {
+                        "ru": null
+                    },
+                    {
+                        "en": null
+                    },
+                    {
+                        "kk": null
+                    },
+                    {
+                        "lt": null
+                    }
+                ],
+                "hide_mesh_renderer": "0"
+            }
+        ]
+    },
+    "processes": [
+        {
+            "description": [
+                {
+                    "ru": "Назначение"
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "Для увеличения силы сцепления между колесными парами и рельсами, а, следовательно, для реализации увеличенной силы тяги при трогании тепловоза с места и наборе скорости, тепловоз оборудован песочной системой"
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "6",
+            "animationEndTime": "26",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Перечень установленного оборудования"
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "Клапан электромагнитный КЭО15, кран 4302У1, песочница передняя, песочница задняя, форсунка песочницы"
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "26",
+            "animationEndTime": "46",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Принцип действия"
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "Песок под колесные пары следует подавать во время торможения для обеспечения эффективного сцепления\nколес с рельсами. Автоматическая подача песка под колесные пары происходит после нажатия кнопки АВАРИЙНЫЙ СТОП, одновременно с режимом экстренного торможения поезда, подачей звукового сигнала и остановкой дизель-генератора."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "46",
+            "animationEndTime": "71",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Управление подачей песка и форсунками"
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "Управляют подачей песка из кабины машиниста нажатием педали песочницы (на электрической схеме КН) или МПСУ тепловоза при буксовании."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "71",
+            "animationEndTime": "71",
+            "is_parent": "true"
+        },
+        {
+            "description": [
+                {
+                    "ru": "При управлении подачей песка педалью песочницы достаточно, чтобы были включены автоматический выключатель УПРАВЛЕНИЕ ОБЩЕЕ и устройство блокировки тормоза, а реверсор находился в одном из положений ВПЕРЕД или НАЗАД."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "71",
+            "animationEndTime": "91",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "При нажатии педали песочницы срабатывают электропневматические клапана КЭО1, КЭО3 при положении реверсора, установленном в положение ВПЕРЕД и открывают доступ воздуху из питательной магистрали к форсункам ФП1, ФП2, ФП5, ФП6 из которых поступает песок под первую и четвертую колесные пары."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "91",
+            "animationEndTime": "121",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "В случае, когда реверсор установлен в положение НАЗАД, при нажатии педали песочницы срабатывают клапана КЭО2, КЭО4 и подача песка происходит через форсунки песочниц ФП3, ФП4, ФП7, ФП8 под третью и шестую колесные пары."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "121",
+            "animationEndTime": "141",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "После отпуска педали песочницы клапана обесточиваются, прекращается подача воздуха из питательной магистрали к форсункам."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "141",
+            "animationEndTime": "161",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Трубопровод песочной системы"
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "Так как трубы, подводящие песок под третью и четвертую колесные пары, имеют длинные горизонтальные участки, то для предотвращения возможности слеживания в них песка и образования пробок, под углом 30° к оси трубы в трех местах дополнительно подводится воздух."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "161",
+            "animationEndTime": "161",
+            "is_parent": "true"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Трубопровод песочной системы, размещенный на раме тепловоза, соединяется с трубопроводом, установленным на рамах тележек, резинотканевыми рукавами, так как рамы тележек имеют значительные перемещения относительно рамы тепловоза."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "Резинотканевые рукава надеваются на соединяемые наконечники труб и затягиваются хомутами."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "161",
+            "animationEndTime": "182",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Резьбовые соединения с цилиндрической трубной резьбой ставятся на подмотке из льна на железном или любом другом сурике. После сборки трубопровод испытывается на плотность рабочим давлением."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "182",
+            "animationEndTime": "202",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Разобщительные краны КР1 и КР2 служат для отключения трубопроводов песочной системы передней и задней тележек в случае возникновения такой необходимости."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "202",
+            "animationEndTime": "222",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "В форсунки песочницы песок поступает самотеком из бункеров, сваренных из листовой стали, и ужесточенных перегородками."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "К донному листу каждого бункера приварены по два штуцера, в них вворачиваются патрубки, соединяющие бункер с форсунками. Для предотвращения попадания крупных включений в песочную систему в горловинах бункеров установлены стальные оцинкованные сетки. Для удобства заправки песком задних бункеров предусмотрены подножки и поручни на задней стенке тепловоза."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "222",
+            "animationEndTime": "236",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Форсунка песочницы"
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "Форсунка песочницы в соответствии с рисунком 24 является одним из основных элементов песочной системы."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "236",
+            "animationEndTime": "236",
+            "is_parent": "true"
+        },
+        {
+            "description": [
+                {
+                    "ru": "В корпус 1 форсунки песок попадает из бункера самотеком, а через штуцер подводится воздух клапана."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "Воздух, подведенный в полость Г, через канал попадает в полость В, откуда основная часть воздуха выходит через канал Б сопла 7, а другая часть - через канал А попадает в камеры смешения песка с воздухом и взрыхляет песок, поступающий из бункера."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "236",
+            "animationEndTime": "261",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Поток воздуха, выходящий из канала Б, эжектирует песковоздушную смесь из камеры смешения корпуса форсунки и транспортирует ее по трубопроводу к колесным парам."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "Из полости Г воздух поступает также через сверления сопла 2, далее через кольцевой зазор между наружной поверхностью сопла 7 и корпуса форсунки направляется в трубопровод транспортировки песковоздушной смеси."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "261",
+            "animationEndTime": "273",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Воздух, подводимый через сопло 2, уменьшает давление дросселирования в головке форсунки, сопровождающееся интенсивным охлаждением воздуха и выпадением влаги, увеличивает давление воздуха в трубопроводе подачи песка под колесные пары, уменьшая возможность слеживания песка и образования пробок в этом трубопроводе."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "273",
+            "animationEndTime": "294",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Пробку 6 выворачивают при замене износившегося сопла 7."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "294",
+            "animationEndTime": "301",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Крышку 8 снимают при очистке полостей и канала корпуса форсунки."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "301",
+            "animationEndTime": "306",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Регулировка форсунки"
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": "От правильности регулировки форсунки зависит эффективность использования песка. \r\nПескоподача регулируется на производительность от 800 до 1200 г/мин под каждое колесо вращением регулировочного винта 3. \r\nДля удобства регулирования регулировочный винт имеет удлиненную коническую часть. После регулировки подачи песка винт фиксируется гайкой 4."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "306",
+            "animationEndTime": "331",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "В разъемные соединения между корпусом форсунки и накидными гайками патрубка, подводящего песок к форсунке, и трубы, отводящей песковоздушную смесь от форсунки, для уплотнения установлены прокладки из прокладочного картона толщиной 1 мм."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "331",
+            "animationEndTime": "347",
+            "is_parent": "false"
+        },
+        {
+            "description": [
+                {
+                    "ru": "Фланцевая часть штуцера подвода воздуха к форсунке уплотняется с корпусом форсунки асбестовым шнуром толщиной 4 мм."
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "detailing": [
+                {
+                    "ru": null
+                },
+                {
+                    "en": null
+                },
+                {
+                    "kk": null
+                },
+                {
+                    "lt": null
+                }
+            ],
+            "instruments": [],
+            "repair_types": [],
+            "specialists": [],
+            "links": [],
+            "animationStartTime": "347",
+            "animationEndTime": "357",
+            "is_parent": "false"
+        }
+    ],
+    "fbxName": "000000000059.FBX",
+    "data": {
+        "details": [
+            {
+                "teplovoz_body": [
+                    "HUD_Opacity"
+                ]
+            },
+            {
+                "Train_Light": [
+                    "HUD_Opacity"
+                ]
+            },
+            {
+                "Teleshka_front": [
+                    "HUD_Opacity"
+                ]
+            },
+            {
+                "Teleshka_back": [
+                    "HUD_Opacity"
+                ]
+            },
+            {
+                "pult_upravleniya": [
+                    "HUD_Opacity"
+                ]
+            },
+            {
+                "08": []
+            },
+            {
+                "pitatelnaya_magistral_01": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozdux_Truba_02": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Drosel_02": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Vozdux_Truba_06": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozdux_Truba_07": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Drosel_01.001": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Vozdux_Truba_06.001": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.001": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Drosel_02.001": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Vozdux_Truba_06.002": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozdux_Truba_07.001": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Drosel_01.000": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Vozdux_Truba_06.003": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.002": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.003": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.004": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Cylinder.002": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.005": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.006": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozdux_Truba_02.001": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.007": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.008": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.009": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.010": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.011": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.012": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.013": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.014": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Cylinder.003": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_01": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_01_3": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Drosel_02.002": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Vozdux_Truba_06.004": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozdux_Truba_07.002": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Drosel_01.002": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Vozdux_Truba_06.005": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_01_1": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Drosel_01.003": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Vozdux_Truba_06.007": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_01_2": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.018": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_01_4": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Cylinder.006": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_00": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_02": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_02_3": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_02_01": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_02_2": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_02_4": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_02_6": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozduhovod_01.026": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.029": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Drosel_02.003": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Vozdux_Truba_06.006": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Vozdux_Truba_07.003": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Cylinder.008": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.030": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Cylinder.009": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "pitatelnaya_magistral_01.031": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Cylinder.007": [
+                    "Vozdux_Truba"
+                ]
+            },
+            {
+                "Rukav_Gibky_01.002": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_02.004": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_03.002": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_04": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_01.001": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_02.001": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_03.001": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_04.001": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_01": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_02.002": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_02": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_03": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_02.003": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_01.003": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_03.003": [
+                    "Rubber"
+                ]
+            },
+            {
+                "Rukav_Gibky_04.003": [
+                    "Rubber"
+                ]
+            },
+            {
+                "KOE4": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "KOE3": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "KOE2": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "KOE1": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "Crane_4302U1_02": []
+            },
+            {
+                "Crane_4302U1_01": []
+            },
+            {
+                "Kreplenie_01": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "Kreplenie_02": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "Kreplenie_01.001": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "Kreplenie_02.001": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "Kreplenie_01.002": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "Nakonechnik_02.002": [
+                    "Rubber",
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Kreplenie_01.003": [
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "Nakonechnik_02.003": [
+                    "Rubber",
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Bunker_sand_back_01": [
+                    "Metal_Bunker"
+                ]
+            },
+            {
+                "Bunker_sand_back_02": [
+                    "Metal_Bunker"
+                ]
+            },
+            {
+                "Bunker_sand_front_01": [
+                    "Metal_Bunker"
+                ]
+            },
+            {
+                "Bunker_sand_front_02": [
+                    "Metal_Bunker"
+                ]
+            },
+            {
+                "tryba_03": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_01_2": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_02_2": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_03_2": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "tryba_03.001": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "tryba_03.002": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_01_2.001": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_02_2.001": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_03_2.001": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "tryba_03.003": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Truba_sand_01": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_01_2.002": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_02_2.002": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_03_2.002": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Truba_sand_02": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "tryba_03.006": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_01_2.003": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_03_2.003": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "tryba_03.007": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "Pesok_Truba_02_2.003": [
+                    "Pesok_Truba"
+                ]
+            },
+            {
+                "FP07": [
+                    "EPV_Metal",
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "FP05": [
+                    "EPV_Metal",
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "FP08": [
+                    "EPV_Metal",
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "FP06": [
+                    "EPV_Metal",
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "FP03": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "FP03.001": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "FP03.002": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP03.003": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP03.004": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP03.005": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP03.006": [
+                    "Rubber"
+                ]
+            },
+            {
+                "FP03.007": [
+                    "Rubber"
+                ]
+            },
+            {
+                "FP03.008": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP03.009": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP03.010": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP03.011": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP03.012": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP03.013": [
+                    "Rubber"
+                ]
+            },
+            {
+                "FP03.014": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "FP03.015": [
+                    "Rubber"
+                ]
+            },
+            {
+                "FP03.016": [
+                    "Metal_Forsunka"
+                ]
+            },
+            {
+                "Cylinder.001": [
+                    "EPV_Metal"
+                ]
+            },
+            {
+                "FP01": [
+                    "EPV_Metal",
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "FP04": [
+                    "EPV_Metal",
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "FP02": [
+                    "EPV_Metal",
+                    "Metal_Forsunka",
+                    "Rubber"
+                ]
+            },
+            {
+                "Arrow.001": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.000": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.002": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.003": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.004": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.005": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.006": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.007": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.008": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.009": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.010": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.011": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.012": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.013": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.014": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.015": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.017": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.016": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.018": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.019": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.020": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.021": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.022": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.023": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.024": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.025": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.026": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.027": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.028": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.029": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.030": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.031": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.032": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.033": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.034": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.035": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.036": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.037": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.038": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.039": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.040": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.041": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.042": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.043": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.045": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.044": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.046": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.048": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.049": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.050": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.051": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.047": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.052": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.053": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.054": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.055": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.056": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.057": [
+                    "HUD_Circle"
+                ]
+            },
+            {
+                "Arrow.059": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.058": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.060": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.061": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.062": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.063": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.064": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.065": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.066": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.067": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.068": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Cylinder": [
+                    "HUD_Cylinder"
+                ]
+            },
+            {
+                "Arrow.069": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.070": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Cylinder.004": [
+                    "HUD_Cylinder"
+                ]
+            },
+            {
+                "Arrow.071": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.072": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.073": [
+                    "HUD_Arrow"
+                ]
+            },
+            {
+                "Arrow.074": [
+                    "HUD_Arrow"
+                ]
+            }
+        ],
+        "materials": [
+            {
+                "MatName": "Metal_Bunker",
+                "_Color": [
+                    "0.996875",
+                    "0.9380044",
+                    "0.7142962",
+                    "1"
+                ],
+                "_Metallic": "1",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": false
+            },
+            {
+                "MatName": "Vozdux_Truba",
+                "_Color": [
+                    "0.4378517",
+                    "1",
+                    "0.3831984",
+                    "1"
+                ],
+                "_Metallic": "1",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": false
+            },
+            {
+                "MatName": "Pesok_Truba",
+                "_Color": [
+                    "0.9466563",
+                    "1",
+                    "0.1109377",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": false
+            },
+            {
+                "MatName": "Metal_Forsunka",
+                "_Color": [
+                    "0.559375",
+                    "0.559375",
+                    "0.559375",
+                    "1"
+                ],
+                "_Metallic": "1",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": false
+            },
+            {
+                "MatName": "EPV_Metal",
+                "_Color": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_Metallic": "1",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": false
+            },
+            {
+                "MatName": "HUD_Arrow",
+                "_Color": [
+                    "0",
+                    "0.7868185",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "787c171c09cc46e8.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": false
+            },
+            {
+                "MatName": "HUD_Cylinder",
+                "_Color": [
+                    "0",
+                    "0.7868185",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "c428786cd4df45e8.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": false
+            },
+            {
+                "MatName": "HUD_Circle",
+                "_Color": [
+                    "0",
+                    "0.7868185",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "4139a8a4aab94220.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": false
+            },
+            {
+                "MatName": "Opacity",
+                "_Color": [
+                    "0",
+                    "0.7868185",
+                    "1",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "0",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": false
+            },
+            {
+                "MatName": "Arrow_05",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "be5195584c914775.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_06",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "6fdd61fbc45a4d28.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_04",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "8b4bdcc062694362.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_03",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "f9e4d9cb7ee14eb5.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_Circle_03",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "71e1802def11471d.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_Circle_02",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "fe07c78812ad4cb5.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_Circle_01",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "259515a4681b4eee.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_Circle_04",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "ca23fba2ce9f4fa5.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_Circle_05",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "58cb526c0a444424.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_Circle_08",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "989fbe7f3d004a4a.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_Circle_06",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "6de4f2897f7a4ab9.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_Circle_07",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "c8d242c1903943c0.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "HUD_Light",
+                "_Color": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.6285539",
+                    "0.6285539",
+                    "0.6285539",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "HUD_Opacity",
+                "_Color": [
+                    "0.7921569",
+                    "0.8901961",
+                    "1",
+                    "0.4705882"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "3",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Chistka",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "a3f55f28f2f64d96.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Produvka",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "92c3ecd9fe0346f7.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Protirka",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "d00c2862c1904b03.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Smazka",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "63eec3b10eab43bf.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Washing",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "6225c5beda3d4be6.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Stend_Table",
+                "_Color": [
+                    "0.2394925",
+                    "0.2945215",
+                    "0.3411765",
+                    "0.5882353"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.8",
+                "_Mode": "3",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Stend_Teplovoz",
+                "_Color": [
+                    "0.345098",
+                    "0.3803922",
+                    "0.427451",
+                    "0.4705882"
+                ],
+                "_Metallic": "0.2",
+                "_Glossiness": "0.4",
+                "_Mode": "3",
+                "_BumpScale": "0.15",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Stend_Metal",
+                "_Color": [
+                    "0.5450981",
+                    "0.6235294",
+                    "0.6784314",
+                    "0.5882353"
+                ],
+                "_Metallic": "1",
+                "_Glossiness": "0.75",
+                "_Mode": "0",
+                "_BumpScale": "0.1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "4",
+                "mainTillingY": "4",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Cabel_Rotang_Mat_Tile",
+                "_Color": [
+                    "0.859375",
+                    "0.859375",
+                    "0.859375",
+                    "1"
+                ],
+                "_MainText": "0bbdfb21c3164d6f.png",
+                "_BumpMap": "0bbdfb21c3164d6f.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.6",
+                "_Mode": "0",
+                "_BumpScale": "0.2",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "0.5",
+                "mainTillingY": "0.5",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Cabel_Rotang_UV_Tile",
+                "_Color": [
+                    "0.246875",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_MainText": "2c00dc6abde245d3.png",
+                "_BumpMap": "2c00dc6abde245d3.png",
+                "_Metallic": "1",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "0.2",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Pruzhina",
+                "_Color": [
+                    "0.2456891",
+                    "0.2456891",
+                    "0.2456891",
+                    "1"
+                ],
+                "_BumpMap": "304db6e20a4d4c76.jpg",
+                "_Metallic": "1",
+                "_Glossiness": "0.75",
+                "_Mode": "0",
+                "_BumpScale": "0.1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Rubber",
+                "_Color": [
+                    "0.102011",
+                    "0.102011",
+                    "0.102011",
+                    "1"
+                ],
+                "_BumpMap": "95f29ef5e5464b6c.jpg",
+                "_Metallic": "0",
+                "_Glossiness": "0.55",
+                "_Mode": "0",
+                "_BumpScale": "0.15",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "2",
+                "mainTillingY": "2",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Metall_Glossy",
+                "_Color": [
+                    "0.796875",
+                    "0.7380149",
+                    "0.6157671",
+                    "1"
+                ],
+                "_BumpMap": "085ce483f83f4dda.jpg",
+                "_Metallic": "1",
+                "_Glossiness": "0.8732802",
+                "_Mode": "0",
+                "_BumpScale": "0.05",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "3",
+                "mainTillingY": "3",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Plastik_Black",
+                "_Color": [
+                    "0.1176471",
+                    "0.1176471",
+                    "0.1176471",
+                    "1"
+                ],
+                "_BumpMap": "304db6e20a4d4c76.jpg",
+                "_Metallic": "0",
+                "_Glossiness": "0.85",
+                "_Mode": "0",
+                "_BumpScale": "0.1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "2",
+                "mainTillingY": "2",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Kolodka_Keramika",
+                "_Color": [
+                    "0.8522059",
+                    "0.7192931",
+                    "0.6059262",
+                    "1"
+                ],
+                "_MainText": "b92a7fdbaedc402e.jpg",
+                "_BumpMap": "b92a7fdbaedc402e.jpg",
+                "_Metallic": "0",
+                "_Glossiness": "0.9",
+                "_Mode": "0",
+                "_BumpScale": "0.05",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Kamera_Kryshka",
+                "_Color": [
+                    "0.5908087",
+                    "0.5035752",
+                    "0.3846205",
+                    "1"
+                ],
+                "_BumpMap": "318fed86fe39427f.jpg",
+                "_Metallic": "0",
+                "_Glossiness": "0.3",
+                "_Mode": "0",
+                "_BumpScale": "0.2",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "3",
+                "mainTillingY": "3",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Kamera_Korpus",
+                "_Color": [
+                    "0.558394",
+                    "0.5919186",
+                    "0.678125",
+                    "1"
+                ],
+                "_MainText": "0a0bb0d4805b4c81.jpg",
+                "_BumpMap": "259769a52f884d59.jpg",
+                "_Metallic": "0.2",
+                "_Glossiness": "0.7",
+                "_Mode": "0",
+                "_BumpScale": "0.1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "3",
+                "mainTillingY": "2",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_01",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "f88264c19d1b48ea.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Nagrev",
+                "_Color": [
+                    "0.85625",
+                    "0.9532812",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "5cab1e6742104ce9.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.84375",
+                    "0.9032739",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_long_01",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "c76cf9933eca4ecd.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "glass",
+                "_Color": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.9094859",
+                "_Mode": "3",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Areometr_GREEN",
+                "_Color": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "333224bc779d46f1.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.95",
+                "_Mode": "3",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Areometr_WHITE",
+                "_Color": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "607e3d188e6445e8.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.95",
+                "_Mode": "3",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "2",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Areometr_RED",
+                "_Color": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "2b51778ec3f846bc.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.95",
+                "_Mode": "3",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Areometr_GLASS",
+                "_Color": [
+                    "1",
+                    "1",
+                    "1",
+                    "0.3921569"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.95",
+                "_Mode": "3",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Areometr_Rubber",
+                "_Color": [
+                    "0.184375",
+                    "0.184375",
+                    "0.184375",
+                    "1"
+                ],
+                "_BumpMap": "da958857e5754b08.jpg",
+                "_Metallic": "0",
+                "_Glossiness": "0.85",
+                "_Mode": "0",
+                "_BumpScale": "0.1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Termometr_Metal",
+                "_Color": [
+                    "0.79375",
+                    "0.79375",
+                    "0.79375",
+                    "1"
+                ],
+                "_Metallic": "0.5",
+                "_Glossiness": "0.6",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "brown_met",
+                "_Color": [
+                    "0.503125",
+                    "0.1739198",
+                    "0",
+                    "1"
+                ],
+                "_Metallic": "0.8784329",
+                "_Glossiness": "0.1284783",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Cab",
+                "_Color": [
+                    "0.203125",
+                    "0.05868055",
+                    "0.05868055",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "bolt",
+                "_Color": [
+                    "0.715625",
+                    "0.715625",
+                    "0.715625",
+                    "1"
+                ],
+                "_Metallic": "0.8422291",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Met4",
+                "_Color": [
+                    "0.3558839",
+                    "0.5665445",
+                    "0.671875",
+                    "1"
+                ],
+                "_Metallic": "0.8008534",
+                "_Glossiness": "0.08192823",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "2",
+                "mainTillingY": "2",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "red_met",
+                "_Color": [
+                    "0.9743873",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_Metallic": "0.9456685",
+                "_Glossiness": "0.9146581",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Latun",
+                "_Color": [
+                    "0.6295344",
+                    "0.5751302",
+                    "0.3847154",
+                    "1"
+                ],
+                "_Metallic": "1",
+                "_Glossiness": "0.75",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Plastic",
+                "_Color": [
+                    "0.3655637",
+                    "0.3655637",
+                    "0.3655637",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.02503364",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "black_Plastic",
+                "_Color": [
+                    "0.09264708",
+                    "0.09264708",
+                    "0.09264708",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.3146788",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "brown_Plastic",
+                "_Color": [
+                    "0.534375",
+                    "0.1845324",
+                    "0.07304408",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.7905245",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Met.1",
+                "_Color": [
+                    "0.878125",
+                    "0.878125",
+                    "0.878125",
+                    "1"
+                ],
+                "_MainText": "8719cc1b5b794d73.jpg",
+                "_Metallic": "0.8318852",
+                "_Glossiness": "0.6974242",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Met",
+                "_Color": [
+                    "0.890625",
+                    "0.890625",
+                    "0.890625",
+                    "1"
+                ],
+                "_Metallic": "0.8060253",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Green",
+                "_Color": [
+                    "0.4504649",
+                    "0.478125",
+                    "0.1778151",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "TOP_Nasos_Bronza",
+                "_Color": [
+                    "0.5430146",
+                    "0.3839889",
+                    "0.3258088",
+                    "1"
+                ],
+                "_BumpMap": "46333b712d8646a7.jpg",
+                "_Metallic": "1",
+                "_Glossiness": "0.8",
+                "_Mode": "0",
+                "_BumpScale": "0.08",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "3",
+                "mainTillingY": "3",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "395_Cabel",
+                "_Color": [
+                    "0.1594822",
+                    "0.1594822",
+                    "0.1594822",
+                    "1"
+                ],
+                "_BumpMap": "da958857e5754b08.jpg",
+                "_Metallic": "0",
+                "_Glossiness": "0.8",
+                "_Mode": "0",
+                "_BumpScale": "0.1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "395_Latun",
+                "_Color": [
+                    "0.7098039",
+                    "0.6627451",
+                    "0.4941176",
+                    "1"
+                ],
+                "_BumpMap": "085ce483f83f4dda.jpg",
+                "_Metallic": "1",
+                "_Glossiness": "0.8",
+                "_Mode": "0",
+                "_BumpScale": "0.1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "2",
+                "mainTillingY": "2",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "395_Metal",
+                "_Color": [
+                    "0.6385305",
+                    "0.6697512",
+                    "0.7243873",
+                    "1"
+                ],
+                "_BumpMap": "085ce483f83f4dda.jpg",
+                "_Metallic": "1",
+                "_Glossiness": "0.85",
+                "_Mode": "0",
+                "_BumpScale": "0.1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "395_Metal_red",
+                "_Color": [
+                    "0.8666667",
+                    "0.2980392",
+                    "0.2284478",
+                    "1"
+                ],
+                "_BumpMap": "085ce483f83f4dda.jpg",
+                "_Metallic": "0.5",
+                "_Glossiness": "0.65",
+                "_Mode": "0",
+                "_BumpScale": "0.12",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "2",
+                "mainTillingY": "2",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "395_Aluminium",
+                "_Color": [
+                    "0.785919",
+                    "0.785919",
+                    "0.785919",
+                    "1"
+                ],
+                "_BumpMap": "085ce483f83f4dda.jpg",
+                "_Metallic": "0.85",
+                "_Glossiness": "0.75",
+                "_Mode": "0",
+                "_BumpScale": "0.08",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Arrow_02",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "ae377e6669bd4c2e.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "HUD_Light_Opacity",
+                "_Color": [
+                    "0.6941177",
+                    "0.7882353",
+                    "0.8196079",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "3",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.6948218",
+                    "0.7901117",
+                    "0.821875",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "395_Metal_Truba",
+                "_Color": [
+                    "0.3528761",
+                    "0.4130254",
+                    "0.453125",
+                    "1"
+                ],
+                "_Metallic": "1",
+                "_Glossiness": "0.75",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "395_Metal_Shtucer",
+                "_Color": [
+                    "0.4680405",
+                    "0.4955723",
+                    "0.5427696",
+                    "1"
+                ],
+                "_Metallic": "1",
+                "_Glossiness": "0.85",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Lak",
+                "_Color": [
+                    "0.8078431",
+                    "0.9411765",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "d593029e71c44d5a.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8109381",
+                    "0.9429247",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Pokraska",
+                "_Color": [
+                    "0.8078431",
+                    "0.9411765",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "55dda9155cba4e4c.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8078431",
+                    "0.9411765",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Razborka",
+                "_Color": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "f281f402a6094f3f.png",
+                "_Metallic": "0",
+                "_Glossiness": "0",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8039216",
+                    "0.8941177",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Ohladit",
+                "_Color": [
+                    "0.8031496",
+                    "0.9212598",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "ba7d4c9f7c1c4525.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8796877",
+                    "0.9650706",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Sushka",
+                "_Color": [
+                    "0.85625",
+                    "0.9191406",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "81c23acb7b2e4582.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8359377",
+                    "0.9254262",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "Picto_Remont",
+                "_Color": [
+                    "0.8401961",
+                    "0.8961275",
+                    "1",
+                    "1"
+                ],
+                "_MainText": "ac426cd216644cea.png",
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "1",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0.8656863",
+                    "0.9430184",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": true,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "metal_zoloto1",
+                "_Color": [
+                    "0.878125",
+                    "0.878125",
+                    "0.2009269",
+                    "1"
+                ],
+                "_Metallic": "0.2844582",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "metal_matov_grey_svetlyi1",
+                "_Color": [
+                    "0.8875",
+                    "0.8875",
+                    "0.8875",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.7586117",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "stal_red",
+                "_Color": [
+                    "0.7284313",
+                    "0.07011638",
+                    "0.07011638",
+                    "1"
+                ],
+                "_Metallic": "0.7336175",
+                "_Glossiness": "0.581049",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            },
+            {
+                "MatName": "al_sheroh1",
+                "_Color": [
+                    "0.9181033",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "_Metallic": "0",
+                "_Glossiness": "0.5",
+                "_Mode": "0",
+                "_BumpScale": "1",
+                "_Parallax": "0.02",
+                "_OcclusionStrength": "1",
+                "_DetailNormalMapScale": "1",
+                "mainTillingX": "1",
+                "mainTillingY": "1",
+                "mainOffsetX": "0",
+                "mainOffsetY": "0",
+                "secondTillingX": "1",
+                "secondTillingY": "1",
+                "secondOffsetX": "0",
+                "secondOffsetY": "0",
+                "_SmoothnessTextureChannel": "0",
+                "_UVSec": "0",
+                "_EmissionColor": [
+                    "0",
+                    "0",
+                    "0",
+                    "1"
+                ],
+                "_EMISSION": false,
+                "isWDLibrary": true
+            }
+        ]
+    }
+}
