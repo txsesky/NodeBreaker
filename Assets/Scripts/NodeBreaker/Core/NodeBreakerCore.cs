@@ -65,21 +65,23 @@ namespace NodeBreaker.Core
 
                 CalculateCenterOfMass(ref m_ChunksBases, m_Chunks);
 
-                var entitiesMatchingName =
-                    Helper.GetEntitiesMatchingName(
+                var entitiesMatchingName = new List<Entity>();
+                Helper.GetEntitiesMatchingName(ref entitiesMatchingName,
                         Path.Combine(Application.streamingAssetsPath, m_Parent.name + "/config.json"),
                         "atlas", "table", "colName", m_Geometry);
 
-                var movableChunks = GetMovableChunks(entitiesMatchingName);
+                var movableChunks = new List<List<Entity>>();
+                GetMovableChunks(ref entitiesMatchingName, ref movableChunks);
 
                 for (int i = 0; i < movableChunks.Count; i++)
                 {
                     for (int j = 0; j < movableChunks[i].Count; j++)
                     {
                         var entity = movableChunks[i][j];
-                        var children = Helper.GetChildrenWithMesh(entity);
+                        var children = new List<Entity>();
+                        Helper.GetChildrenWithMesh(in entity, ref children);
 
-                        entity.composedCubeCollider = GetComposedCubeCollider(children);
+                        entity.composedCubeCollider = GetComposedCubeCollider(in children);
 
                         CalculateDirectionAndDistance(ref entity, m_ChunksBases[i].centerOfMass);
 
@@ -89,9 +91,9 @@ namespace NodeBreaker.Core
                     var entities = movableChunks[i];
                     //SortMovableEntitiesInOrder(ref entities);
                     var baseE = m_ChunksBases[i];
-                    CalculateBaseMinMax(m_Geometry.transform, ref baseE);
+                    CalculateBaseMinMax(in m_Geometry, ref baseE);
+                    CalculateDesiredPosition(ref entities, in baseE);
                     m_ChunksBases[i] = baseE;
-                    CalculateDesiredPosition(ref entities, m_ChunksBases[i]);
                     movableChunks[i] = entities;
                 }
 
@@ -105,10 +107,8 @@ namespace NodeBreaker.Core
             }
         }
 
-        private List<List<Entity>> GetMovableChunks(List<Entity> entitiesMatchingName)
+        private void GetMovableChunks(ref List<Entity> entitiesMatchingName, ref List<List<Entity>> movableChunks)
         {
-            var movableChunks = new List<List<Entity>>();
-
             for (int i = 0; i < m_Chunks.Count; i++)
             {
                 movableChunks.Add(new List<Entity>());
@@ -117,6 +117,11 @@ namespace NodeBreaker.Core
             for (int i = 0; i < entitiesMatchingName.Count; i++)
             {
                 var listOfGameObjectsWithChunkId = FindChunkId(entitiesMatchingName[i].gameObject);
+
+                if (listOfGameObjectsWithChunkId.Count <= 0)
+                {
+                    continue;
+                }
 
                 var id = listOfGameObjectsWithChunkId[0].GetComponent<ChunkGroupId>().value;
 
@@ -172,8 +177,7 @@ namespace NodeBreaker.Core
             {
                 print($"Movable chunk {i} has {movableChunks[i].Count.ToString()} elements");
             }*/
-
-            return movableChunks;
+            
         }
 
         public List<GameObject> FindChunkId(GameObject go)
@@ -391,7 +395,7 @@ namespace NodeBreaker.Core
             return new CubeCollider(axes, points, center, extents);
         }
 
-        private CubeCollider GetComposedCubeCollider(List<Entity> entities)
+        private CubeCollider GetComposedCubeCollider(in List<Entity> entities)
         {
             var points = new List<Vector3>();
 
@@ -716,7 +720,7 @@ namespace NodeBreaker.Core
             entities.AddRange(zNegList);
         }
 
-        private void CalculateBaseMinMax(Transform geometry, ref Entity baseEntity)
+        private void CalculateBaseMinMax(in GameObject geometry, ref Entity baseEntity)
         {
             var baseMinX = float.MaxValue;
             var baseMaxX = float.MinValue;
@@ -727,9 +731,9 @@ namespace NodeBreaker.Core
 
             for (int j = 0; j < baseEntity.composedCubeCollider.vertices.Length; j++)
             {
-                var right = geometry.right;
-                var forward = geometry.forward;
-                var up = geometry.up;
+                var right = geometry.transform.right;
+                var forward = geometry.transform.forward;
+                var up = geometry.transform.up;
 
                 var valX = Mathf.Sign(Vector3.Dot(baseEntity.composedCubeCollider.vertices[j], right.normalized)) *
                            Vector3.Project(
@@ -786,7 +790,7 @@ namespace NodeBreaker.Core
         }
 
 
-        private void CalculateDesiredPosition(ref List<Entity> entities, Entity baseEntity)
+        private void CalculateDesiredPosition(ref List<Entity> entities, in Entity baseEntity)
         {
             float iterSizeX = 0f;
             float iterSizeY = 0f;

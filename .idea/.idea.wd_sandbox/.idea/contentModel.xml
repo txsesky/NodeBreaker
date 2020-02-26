@@ -395,6 +395,7 @@
               <e p="CollisionDetector.cs" t="Include" />
               <e p="Helper.cs" t="Include" />
               <e p="SortingAlgorithm.cs" t="Include" />
+              <e p="StringExtension.cs" t="Include" />
             </e>
           </e>
         </e>

@@ -11,11 +11,10 @@ namespace NodeBreaker.Utilities
 {
     public static class Helper
     {
-        public static List<Entity> GetEntitiesMatchingName(string path, string subPath0, string subPath1,
+        public static List<Entity> GetEntitiesMatchingName(ref List<Entity> entities,string path, string subPath0, string subPath1,
             string subPath2, GameObject gameObject)
         {
             var names = GetNamesFromJson(path, subPath0, subPath1, subPath2);
-            var entities = new List<Entity>();
             var children = new List<GameObject>();
 
             children.Add(gameObject);
@@ -60,10 +59,8 @@ namespace NodeBreaker.Utilities
             return entities;
         }
 
-        public static List<Entity> GetChildrenWithMesh(Entity baseEntity)
+        public static void GetChildrenWithMesh(in Entity baseEntity, ref List<Entity> entities)
         {
-            var entities = new List<Entity>();
-
             if (baseEntity.gameObject.GetComponent<MeshFilter>() != null)
             {
                 var entity = new Entity {gameObject = baseEntity.gameObject};
@@ -71,8 +68,7 @@ namespace NodeBreaker.Utilities
             }
 
             IterateOverChildren(ref entities, baseEntity.gameObject);
-
-            return entities;
+            
         }
         
         private static List<string> GetNamesFromJson(string path, string subPath0, string subPath1, string subPath2)
@@ -120,7 +116,11 @@ namespace NodeBreaker.Utilities
             if (baseObject == null)
                 return;
 
-            if (String.Compare(baseObject.name, "HUD", StringComparison.OrdinalIgnoreCase) == 0)
+            if (baseObject.name.Contains("HUD", StringComparison.OrdinalIgnoreCase))
+            {
+                return;
+            }
+            if (baseObject.name.Contains("ARROW", StringComparison.OrdinalIgnoreCase))
             {
                 return;
             }
