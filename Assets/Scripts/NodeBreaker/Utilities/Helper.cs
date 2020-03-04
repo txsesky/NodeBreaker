@@ -11,9 +11,10 @@ namespace NodeBreaker.Utilities
 {
     public static class Helper
     {
-        public static List<Entity> GetEntitiesMatchingName(ref List<Entity> entities,string path, string subPath0, string subPath1,
+        public static void GetEntitiesMatchingName(out List<Entity> entities,string path, string subPath0, string subPath1,
             string subPath2, GameObject gameObject)
         {
+            entities = new List<Entity>();
             var names = GetNamesFromJson(path, subPath0, subPath1, subPath2);
             var children = new List<GameObject>();
 
@@ -40,8 +41,6 @@ namespace NodeBreaker.Utilities
                     entities.Add(entity);
                 }
             }
-
-            return entities;
         }
 
         public static List<Entity> GetChildrenWithMesh(in GameObject baseObject)
@@ -59,8 +58,9 @@ namespace NodeBreaker.Utilities
             return entities;
         }
 
-        public static void GetChildrenWithMesh(in Entity baseEntity, ref List<Entity> entities)
+        public static void GetChildrenWithMesh(in Entity baseEntity, out List<Entity> entities)
         {
+            entities = new List<Entity>();
             if (baseEntity.gameObject.GetComponent<MeshFilter>() != null)
             {
                 var entity = new Entity {gameObject = baseEntity.gameObject};

@@ -1,115 +1,149 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using MathGeoLib;
+using NodeBreaker.Components;
 using NodeBreaker.Data;
 using NodeBreaker.Utilities;
 using UnityEngine;
 
 namespace NodeBreaker.Core
 {
-    public class NodeBreakerCore : MonoBehaviour
+    public static class NodeBreakerCore
     {
-        [SerializeField] private GameObject m_Geometry;
-        [SerializeField] private GameObject m_Parent;
-
-        private List<List<Entity>> m_Chunks = new List<List<Entity>>();
-        private List<Entity> m_ChunksBases = new List<Entity>();
-
-        private bool m_Initialized;
-
-        private void OnGUI()
+        public static void Initialize(in GameObject geometryNode, ref GameObject rootNode, in string jsonPath,
+            ref List<List<Entity>> chunks,
+            bool calculateChunks = false)
         {
-            GUIStyle customButton = new GUIStyle("Button");
-            customButton.fontSize = 32;
-            customButton.fontStyle = FontStyle.Bold;
-            customButton.normal.textColor = Color.blue;
+            var nodeDataComponent = rootNode.AddComponent<NodeDataComponent>();
+            nodeDataComponent.position = rootNode.transform.position;
+            nodeDataComponent.rotation = rootNode.transform.rotation;
 
-            if (GUI.Button(new Rect(0, 0, 300, 150), "Custom Method", customButton))
+            if (calculateChunks)
             {
-                var time = Time.realtimeSinceStartup;
-                CallCustomMethod();
-                print(Time.realtimeSinceStartup - time);
-            }
-
-            if (GUI.Button(new Rect(0, 151, 300, 150), "Disassemble", customButton))
-            {
-                var time = Time.realtimeSinceStartup;
-                Disassemble();
-                print(message: Time.realtimeSinceStartup - time);
-            }
-
-            if (GUI.Button(new Rect(0, 302, 300, 150), "Assemble", customButton))
-            {
-                Assemble();
-            }
-        }
-
-        public void CallCustomMethod()
-        {
-        }
-
-        private void Initialize()
-        {
-            if (!m_Initialized)
-            {
-                m_Chunks = GetGroupedChunks(m_Geometry);
-                m_ChunksBases = GetChunksBases(m_Chunks);
-
-                /*for (int i = 0; i < m_ChunksBases.Count; i++)
-                {
-                    Helper.CreateBoundingCube(m_ChunksBases[i].composedCubeCollider, Color.red);
-                }*/
-
-                CalculateCenterOfMass(ref m_ChunksBases, m_Chunks);
-
-                var entitiesMatchingName = new List<Entity>();
-                Helper.GetEntitiesMatchingName(ref entitiesMatchingName,
-                        Path.Combine(Application.streamingAssetsPath, m_Parent.name + "/config.json"),
-                        "atlas", "table", "colName", m_Geometry);
-
-                var movableChunks = new List<List<Entity>>();
-                GetMovableChunks(ref entitiesMatchingName, ref movableChunks);
-
+                GetGroupedChunks(in geometryNode, ref chunks);
+                GetChunksBases(in chunks, out var chunksBases);
+                CalculateCenterOfMass(ref chunksBases, in chunks);
+                Helper.GetEntitiesMatchingName(out var entitiesMatchingName, jsonPath,
+                    "atlas", "table", "colName", geometryNode);
+                GetMovableChunks(ref entitiesMatchingName, out var movableChunks, ref chunks, ref chunksBases);
                 for (int i = 0; i < movableChunks.Count; i++)
                 {
+                    var baseEntity = chunksBases[i];
+
                     for (int j = 0; j < movableChunks[i].Count; j++)
                     {
                         var entity = movableChunks[i][j];
-                        var children = new List<Entity>();
-                        Helper.GetChildrenWithMesh(in entity, ref children);
+
+                        Helper.GetChildrenWithMesh(in entity, out var children);
 
                         entity.composedCubeCollider = GetComposedCubeCollider(in children);
 
-                        CalculateDirectionAndDistance(ref entity, m_ChunksBases[i].centerOfMass);
+                        CalculateDirectionAndDistance(ref entity, in baseEntity);
 
                         movableChunks[i][j] = entity;
                     }
 
                     var entities = movableChunks[i];
                     //SortMovableEntitiesInOrder(ref entities);
-                    var baseE = m_ChunksBases[i];
-                    CalculateBaseMinMax(in m_Geometry, ref baseE);
-                    CalculateDesiredPosition(ref entities, in baseE);
-                    m_ChunksBases[i] = baseE;
+                    CalculateBaseMinMax(in geometryNode, ref baseEntity);
+                    CalculateDesiredPosition(ref entities, in baseEntity);
+                    chunksBases[i] = baseEntity;
                     movableChunks[i] = entities;
                 }
 
-                m_Chunks.Clear();
-                m_Chunks = movableChunks;
+                chunks.Clear();
+                chunks = movableChunks;
+            }
+            else
+            {
+                chunks.Add(new List<Entity>());
+                chunks[0] = Helper.GetChildrenWithMesh(geometryNode);
+                //GetChunksBases(in chunks, out var chunksBases);//calc
+                var definedEntities = chunks[0];
+                GetRendererCollider(in definedEntities, out var chunksBase);
+                var chunksBases = new List<Entity>();
+                chunksBases.Add(chunksBase);
+                Helper.CreateBoundingCube(chunksBases[0].composedCubeCollider, Color.cyan);
+                CalculateCenterOfMass(ref chunksBases, in chunks);
+                Helper.GetEntitiesMatchingName(out var entitiesMatchingName, jsonPath,
+                    "atlas", "table", "colName", geometryNode);
 
-                /*StopAllCoroutines();
-                StartCoroutine(DrawLines(movableChunks));*/
+                var baseEntity = chunksBases[0];
 
-                m_Initialized = true;
+                for (int j = 0; j < entitiesMatchingName.Count; j++)
+                {
+                    var entity = entitiesMatchingName[j];
+
+                    Helper.GetChildrenWithMesh(in entity, out var children);
+                    entity.composedCubeCollider = GetComposedCubeCollider(in children);
+                    CalculateDirectionAndDistance(ref entity, in baseEntity);
+
+                    entitiesMatchingName[j] = entity;
+                }
+
+                var entities = entitiesMatchingName;
+                //SortMovableEntitiesInOrder(ref entities);
+                CalculateBaseMinMax(in geometryNode, ref baseEntity);
+                CalculateDesiredPosition(ref entities, in baseEntity);
+                chunksBases[0] = baseEntity;
+                entitiesMatchingName = entities;
+
+
+                chunks.Clear();
+                chunks.Add(entitiesMatchingName);
             }
         }
 
-        private void GetMovableChunks(ref List<Entity> entitiesMatchingName, ref List<List<Entity>> movableChunks)
+        private static void GetRendererCollider(in List<Entity> definedEntities, out Entity chunkBase)
         {
-            for (int i = 0; i < m_Chunks.Count; i++)
+            var bounds = new Bounds(definedEntities[0].gameObject.GetComponent<Renderer>().bounds.center,
+                definedEntities[0].gameObject.GetComponent<Renderer>().bounds.size);
+
+            for (int i = 1; i < definedEntities.Count; i++)
+            {
+                bounds.Encapsulate(definedEntities[i].gameObject.GetComponent<Renderer>().bounds);
+            }
+
+            var axisX = definedEntities[0].baseRightVector;
+            var axisY = definedEntities[0].baseUpVector;
+            var axisZ = definedEntities[0].baseForwardVector;
+
+            var min = bounds.min;
+            var max = bounds.max;
+
+            var A = new Vector3(min.x, min.y, min.z);
+            var B = new Vector3(max.x, min.y, min.z);
+            var C = new Vector3(max.x, max.y, min.z);
+            var D = new Vector3(min.x, max.y, min.z);
+            var E = new Vector3(min.x, min.y, max.z);
+            var F = new Vector3(max.x, min.y, max.z);
+            var G = new Vector3(max.x, max.y, max.z);
+            var H = new Vector3(min.x, max.y, max.z);
+
+            var axes = new[]
+            {
+                axisX, axisY, axisZ
+            };
+
+            var points = new[]
+            {
+                A, B, C, D, E, F, G, H
+            };
+
+            chunkBase = new Entity
+            {
+                composedCubeCollider = new CubeCollider(axes, points,  bounds.center, bounds.extents),
+            };
+        }
+
+        private static void GetMovableChunks(ref List<Entity> entitiesMatchingName,
+            out List<List<Entity>> movableChunks, ref List<List<Entity>> chunks, ref List<Entity> chunksBases)
+        {
+            movableChunks = new List<List<Entity>>();
+
+            for (int i = 0; i < chunks.Count; i++)
             {
                 movableChunks.Add(new List<Entity>());
             }
@@ -137,7 +171,7 @@ namespace NodeBreaker.Core
                         id = listOfGameObjectsWithChunkId[j].GetComponent<ChunkGroupId>().value;
                     }
 
-                    Destroy(listOfGameObjectsWithChunkId[j].GetComponent<ChunkGroupId>());
+                    Object.Destroy(listOfGameObjectsWithChunkId[j].GetComponent<ChunkGroupId>());
                 }
 
                 if (chunkRelationList.Count < 2)
@@ -159,7 +193,7 @@ namespace NodeBreaker.Core
 
                     for (int j = 0; j < chunkRelationList.Count; j++)
                     {
-                        relativeBases.Add(m_ChunksBases[chunkRelationList[j]]);
+                        relativeBases.Add(chunksBases[chunkRelationList[j]]);
                     }
 
                     var composedCubeCollider = GetComposedCubeColliderFromCollider(relativeBases);
@@ -167,20 +201,12 @@ namespace NodeBreaker.Core
                     {
                         composedCubeCollider = composedCubeCollider, centerOfMass = composedCubeCollider.center
                     };
-                    m_ChunksBases.Add(chunkBase);
+                    chunksBases.Add(chunkBase);
                 }
             }
-
-            /*print($"Movable chunks count {movableChunks.Count.ToString()}");
-
-            for (int i = 0; i < movableChunks.Count; i++)
-            {
-                print($"Movable chunk {i} has {movableChunks[i].Count.ToString()} elements");
-            }*/
-            
         }
 
-        public List<GameObject> FindChunkId(GameObject go)
+        private static List<GameObject> FindChunkId(GameObject go)
         {
             var list = new List<GameObject>();
 
@@ -194,7 +220,7 @@ namespace NodeBreaker.Core
             return list;
         }
 
-        private void IterateOverChildren(ref List<GameObject> list, GameObject o)
+        private static void IterateOverChildren(ref List<GameObject> list, GameObject o)
         {
             if (o == null)
                 return;
@@ -214,9 +240,9 @@ namespace NodeBreaker.Core
             }
         }
 
-        private List<List<Entity>> GetGroupedChunks(GameObject baseGeometryNode)
+        private static void GetGroupedChunks(in GameObject baseGeometryNode, ref List<List<Entity>> chunks)
         {
-            var chunks = new List<List<Entity>>();
+            chunks.Clear();
 
             var entities = Helper.GetChildrenWithMesh(baseGeometryNode);
 
@@ -228,7 +254,7 @@ namespace NodeBreaker.Core
 
                 if (i == 0)
                 {
-                    e1.singleCubeCollider = GetSingleCubeCollider(e1);
+                    e1.singleCubeCollider = GetSingleCubeCollider(in e1);
                 }
 
                 e1.otherIds = new List<int>();
@@ -237,7 +263,7 @@ namespace NodeBreaker.Core
                 for (int j = i + 1; j < entities.Count; j++)
                 {
                     var e2 = entities[j];
-                    e2.singleCubeCollider = GetSingleCubeCollider(e2);
+                    e2.singleCubeCollider = GetSingleCubeCollider(in e2);
                     entities[j] = e2;
 
                     if (IsOverlapOrNear(e1, e2))
@@ -298,13 +324,11 @@ namespace NodeBreaker.Core
                     }
                 }
             }
-
-            return chunks;
         }
 
-        private List<Entity> GetChunksBases(List<List<Entity>> chunks)
+        private static void GetChunksBases(in List<List<Entity>> chunks, out List<Entity> chunksBases)
         {
-            var chunksBases = new List<Entity>();
+            chunksBases = new List<Entity>();
 
             for (int i = 0; i < chunks.Count; i++)
             {
@@ -313,13 +337,11 @@ namespace NodeBreaker.Core
                 var chunkBase = new Entity {composedCubeCollider = composedCubeCollider};
                 chunksBases.Add(chunkBase);
             }
-
-            return chunksBases;
         }
 
 
-        private CubeCollider GetSingleCubeCollider(Entity entity)
-        { 
+        private static CubeCollider GetSingleCubeCollider(in Entity entity)
+        {
             var localToWorldMatrix = entity.gameObject.transform.localToWorldMatrix;
             var bounds = entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds;
 
@@ -354,7 +376,7 @@ namespace NodeBreaker.Core
             return new CubeCollider(axes, points, center, Vector3.zero);
         }
 
-        public static CubeCollider TransformBounds(Transform _transform, Bounds _localBounds)
+        private static CubeCollider TransformBounds(Transform _transform, Bounds _localBounds)
         {
             var center = _transform.TransformPoint(_localBounds.center);
 
@@ -391,11 +413,11 @@ namespace NodeBreaker.Core
             {
                 A, B, C, D, E, F, G, H
             };
-            
+
             return new CubeCollider(axes, points, center, extents);
         }
 
-        private CubeCollider GetComposedCubeCollider(in List<Entity> entities)
+        private static CubeCollider GetComposedCubeCollider(in List<Entity> entities)
         {
             var points = new List<Vector3>();
 
@@ -471,53 +493,9 @@ namespace NodeBreaker.Core
             }
 
             return GetSingleCubeCollider(entities[0]);
-
-           /* TransformBounds(entities[0].gameObject.transform,
-                entities[0].gameObject.GetComponent<MeshFilter>().sharedMesh.bounds);
-
-            var center = 
-
-            var size = 
-
-            var bounds = new Bounds(center, size);
-
-            for (int i = 1; i < entities.Count; i++)
-            {
-                var centerI = entities[i].gameObject.transform
-                    .TransformPoint(entities[i].gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.center);
-
-                var sizeI = Vector3.Scale(entities[i].gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.center,
-                    entities[i].gameObject.transform.localToWorldMatrix.lossyScale);
-
-                var boundsI = new Bounds(center, size);
-                
-                bounds.Encapsulate(boundsI);
-            }
-
-            center = bounds.center;
-            var extents = bounds.extents;
-            
-            var min = center - extents;
-            var max = center + extents;
-
-            var A = new Vector3(min.x, min.y, min.z);
-            var B = new Vector3(max.x, min.y, min.z);
-            var C = new Vector3(max.x, max.y, min.z);
-            var D = new Vector3(min.x, max.y, min.z);
-            var E = new Vector3(min.x, min.y, max.z);
-            var F = new Vector3(max.x, min.y, max.z);
-            var G = new Vector3(max.x, max.y, max.z);
-            var H = new Vector3(min.x, max.y, max.z);
-
-            var points = new[]
-            {
-                A, B, C, D, E, F, G, H
-            };
-
-            return new CubeCollider(,points,);*/
         }
 
-        private CubeCollider GetComposedCubeColliderFromCollider(List<Entity> entities)
+        private static CubeCollider GetComposedCubeColliderFromCollider(List<Entity> entities)
         {
             var points = new List<Vector3>();
 
@@ -567,7 +545,7 @@ namespace NodeBreaker.Core
             return new CubeCollider(axes, composedPoints, obbCenter, Vector3.zero);
         }
 
-        private void CalculateCenterOfMass(ref List<Entity> chunksBases, List<List<Entity>> chunks)
+        private static void CalculateCenterOfMass(ref List<Entity> chunksBases, in List<List<Entity>> chunks)
         {
             for (int k = 0; k < chunksBases.Count; k++)
             {
@@ -619,8 +597,9 @@ namespace NodeBreaker.Core
             }
         }
 
-        private void CalculateDirectionAndDistance(ref Entity entity, Vector3 relativePoint)
+        private static void CalculateDirectionAndDistance(ref Entity entity, in Entity relativeEntity)
         {
+            var relativePoint = relativeEntity.centerOfMass;
             //maybe center of mass not sure
             var distanceX = Vector3
                 .Project(entity.composedCubeCollider.center - relativePoint, entity.baseRightVector).magnitude;
@@ -687,7 +666,7 @@ namespace NodeBreaker.Core
             }
         }
 
-        private void SortMovableEntitiesInOrder(ref List<Entity> entities)
+        private static void SortMovableEntitiesInOrder(ref List<Entity> entities)
         {
             var xPosList = new List<Entity>();
             var yPosList = new List<Entity>();
@@ -720,7 +699,7 @@ namespace NodeBreaker.Core
             entities.AddRange(zNegList);
         }
 
-        private void CalculateBaseMinMax(in GameObject geometry, ref Entity baseEntity)
+        private static void CalculateBaseMinMax(in GameObject geometry, ref Entity baseEntity)
         {
             var baseMinX = float.MaxValue;
             var baseMaxX = float.MinValue;
@@ -790,7 +769,7 @@ namespace NodeBreaker.Core
         }
 
 
-        private void CalculateDesiredPosition(ref List<Entity> entities, in Entity baseEntity)
+        private static void CalculateDesiredPosition(ref List<Entity> entities, in Entity baseEntity)
         {
             float iterSizeX = 0f;
             float iterSizeY = 0f;
@@ -878,277 +857,9 @@ namespace NodeBreaker.Core
             }
         }
 
-        private bool IsOverlapOrNear(Entity one, Entity two)
+        private static bool IsOverlapOrNear(Entity one, Entity two)
         {
             return CollisionDetector.IsOverlap(one.singleCubeCollider, two.singleCubeCollider);
         }
-
-        public void Disassemble()
-        {
-            Initialize();
-            StopAllCoroutines();
-            foreach (var chunk in m_Chunks)
-            {
-                StartCoroutine(routine: MoveEntities(chunk));
-            }
-        }
-
-        public void Assemble()
-        {
-            StopAllCoroutines();
-            foreach (var chunk in m_Chunks)
-            {
-                StartCoroutine(BackEntitiesPosition(chunk));
-            }
-        }
-
-
-        private IEnumerator MoveEntities(List<Entity> entities)
-        {
-            var movingTime = 0f;
-            while (movingTime < 1)
-            {
-                movingTime += Time.deltaTime * 0.5f;
-                for (int i = entities.Count - 1; i >= 0; i--)
-                {
-                    var entity = entities[i];
-                    entity.gameObject.transform.position = Vector3.Lerp(entity.gameObject.transform.position,
-                        entity.desiredPosition, movingTime);
-                    entities[i] = entity;
-                }
-
-                yield return null;
-            }
-        }
-
-        private IEnumerator BackEntitiesPosition(List<Entity> movableEntities)
-        {
-            var movingTime = 0f;
-            while (movingTime < 1)
-            {
-                movingTime += Time.deltaTime * 0.5f;
-                foreach (var entity in movableEntities)
-                {
-                    entity.gameObject.transform.position = Vector3.Lerp(entity.gameObject.transform.position,
-                        entity.initialPosition, movingTime);
-                }
-
-                yield return null;
-            }
-        }
-
-        private IEnumerator DrawLines(List<List<Entity>> chunks)
-        {
-            foreach (var chunk in chunks)
-            {
-                var entities = chunk;
-                foreach (var entity in entities)
-                {
-                    yield return new WaitForSeconds(0.1f);
-
-                    Debug.DrawLine(entity.composedCubeCollider.center,
-                        entity.composedCubeCollider.center +
-                        entity.desiredDirection * (entity.distanceFromBaseCenter * 3 + 1),
-                        Color.yellow,
-                        Mathf.Infinity);
-                }
-            }
-        }
     }
 }
-
-
-/*private void CalculateCenterOfMass(ref Entity chunkBase)
-{
-    var massList = new List<float>();
-
-    var posList = new List<Vector3>();
-
-    var entities = Helper.GetChildrenWithMesh(chunkBase);
-
-    for (int i = 0; i < entities.Count; i++)
-    {
-        var bounds = entities[i].gameObject.GetComponent<MeshFilter>().sharedMesh.bounds;
-
-        var size = Vector3.Scale(bounds.size, entities[i].gameObject.transform.localToWorldMatrix.lossyScale);
-        var a = size.x;
-        var b = size.y;
-        var c = size.z;
-
-        var density = 1;
-
-        var m = a * b * c * density;
-
-        massList.Add(m);
-        posList.Add(entities[i].gameObject.transform.localToWorldMatrix.MultiplyPoint3x4(bounds.center));
-    }
-
-    var x = 0f;
-    var y = 0f;
-    var z = 0f;
-
-    var mTotal = 0f;
-
-    for (int i = 0; i < massList.Count; i++)
-    {
-        x += massList[i] * posList[i].x;
-        y += massList[i] * posList[i].y;
-        z += massList[i] * posList[i].z;
-        mTotal += massList[i];
-    }
-
-    var xResult = x / mTotal;
-    var yResult = y / mTotal;
-    var zResult = z / mTotal;
-
-    chunkBase.centerOfMass = new Vector3(xResult, yResult, zResult);
-}*/
-
-/*private OrientedBoundingBox ComposeOBB(List<Entity> entities)
-{
-    var points = new List<Vector3>();
-
-    for (int i = 0; i < entities.Count; i++)
-    {
-        var center = entities[i].singleObb.Center;
-
-        var axisX = entities[i].singleObb.Axis1;
-        var axisY = entities[i].singleObb.Axis2;
-        var axisZ = entities[i].singleObb.Axis3;
-        var extends = entities[i].singleObb.Extent;
-
-        var A = center - extends.z * axisZ - extends.x * axisX - axisY * extends.y;
-        var B = center - extends.z * axisZ + extends.x * axisX - axisY * extends.y;
-        var C = center - extends.z * axisZ + extends.x * axisX + axisY * extends.y;
-        var D = center - extends.z * axisZ - extends.x * axisX + axisY * extends.y;
-
-        var E = center + extends.z * axisZ - extends.x * axisX - axisY * extends.y;
-        var F = center + extends.z * axisZ + extends.x * axisX - axisY * extends.y;
-        var G = center + extends.z * axisZ + extends.x * axisX + axisY * extends.y;
-        var H = center + extends.z * axisZ - extends.x * axisX + axisY * extends.y;
-
-        points.Add(A);
-        points.Add(B);
-        points.Add(C);
-        points.Add(D);
-        points.Add(E);
-        points.Add(F);
-        points.Add(G);
-        points.Add(H);
-    }
-
-    return OrientedBoundingBox.OptimalEnclosing(points.ToArray());
-}*/
-
-/*private void ComposeOBB(ref List<Entity> entities)
-{
-    for (int i = 0; i < entities.Count; i++)
-    {
-        var children = Helper.GetChildrenWithMesh(entities[i]);
-        var points = new List<Vector3>();
-
-        for (int j = 0; j < children.Count; j++)
-        {
-            var ent = children[j];
-            CalcucalteSingleOBB(ref ent);
-            children[j] = ent;
-
-            var center = children[j].singleObb.Center;
-
-            var axisX = children[j].singleObb.Axis1;
-            var axisY = children[j].singleObb.Axis2;
-            var axisZ = children[j].singleObb.Axis3;
-            var extends = children[j].singleObb.Extent;
-
-            var A = center - extends.z * axisZ - extends.x * axisX - axisY * extends.y;
-            var B = center - extends.z * axisZ + extends.x * axisX - axisY * extends.y;
-            var C = center - extends.z * axisZ + extends.x * axisX + axisY * extends.y;
-            var D = center - extends.z * axisZ - extends.x * axisX + axisY * extends.y;
-
-            var E = center + extends.z * axisZ - extends.x * axisX - axisY * extends.y;
-            var F = center + extends.z * axisZ + extends.x * axisX - axisY * extends.y;
-            var G = center + extends.z * axisZ + extends.x * axisX + axisY * extends.y;
-            var H = center + extends.z * axisZ - extends.x * axisX + axisY * extends.y;
-
-            points.Add(A);
-            points.Add(B);
-            points.Add(C);
-            points.Add(D);
-            points.Add(E);
-            points.Add(F);
-            points.Add(G);
-            points.Add(H);
-        }
-
-        var entity = entities[i];
-        entity.composedObb = OrientedBoundingBox.OptimalEnclosing(points.ToArray());
-        entities[i] = entity;
-    }
-}*/
-
-/*private void CalcucalteSingleOBB(ref Entity entity)
-{
-    var min = entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.min;
-    var max = entity.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.max;
-
-    var localToWorldMatrix = entity.gameObject.transform.localToWorldMatrix;
-    
-    var a = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, min.z));
-    var b = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, min.y, max.z));
-    var c = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, min.z));
-    var d = localToWorldMatrix.MultiplyPoint3x4(new Vector3(min.x, max.y, max.z));
-    var e = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, min.z));
-    var f = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, min.y, max.z));
-    var g = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, min.z));
-    var h = localToWorldMatrix.MultiplyPoint3x4(new Vector3(max.x, max.y, max.z));
-
-    var points = new[]
-    {
-        a, 
-        b,
-        c,
-        d,
-        e,
-        f,
-        g,
-        h,
-    };
-
-    //print($"{a} {b} {c} {d} {e} {f} {g} {h}");
-
-    entity.singleObb = OrientedBoundingBox.OptimalEnclosing(points);
-
-    CreateBoundingCube(entity.singleObb);
-}*/
-
-/*private CubeCollider CalculateSingleCubeCollider(OrientedBoundingBox orientedBoundingBox)
-{
-    var center = orientedBoundingBox.Center;
-
-    var axisX = orientedBoundingBox.Axis1;
-    var axisY = orientedBoundingBox.Axis2;
-    var axisZ = orientedBoundingBox.Axis3;
-    var extends = orientedBoundingBox.Extent;
-
-    var A = center - extends.z * axisZ - extends.x * axisX - axisY * extends.y;
-    var B = center - extends.z * axisZ + extends.x * axisX - axisY * extends.y;
-    var C = center - extends.z * axisZ + extends.x * axisX + axisY * extends.y;
-    var D = center - extends.z * axisZ - extends.x * axisX + axisY * extends.y;
-
-    var E = center + extends.z * axisZ - extends.x * axisX - axisY * extends.y;
-    var F = center + extends.z * axisZ + extends.x * axisX - axisY * extends.y;
-    var G = center + extends.z * axisZ + extends.x * axisX + axisY * extends.y;
-    var H = center + extends.z * axisZ - extends.x * axisX + axisY * extends.y;
-
-    var axes = new[]
-    {
-        axisX, axisY, axisZ
-    };
-
-    var points = new[]
-    {
-        A, B, C, D, E, F, G, H
-    };
-
-    return new CubeCollider(axes, points, center);
-}*/

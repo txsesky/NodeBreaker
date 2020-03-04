@@ -381,15 +381,19 @@
           <e p="NodeBreaker" t="Include">
             <e p="Components" t="Include">
               <e p="ChunkGroupId.cs" t="Include" />
+              <e p="NodeBreakerComponent.cs" t="Include" />
+              <e p="NodeDataComponent.cs" t="Include" />
             </e>
             <e p="Core" t="Include">
-              <e p="GeometryMath.cs" t="Include" />
               <e p="NodeBreakerCore.cs" t="Include" />
             </e>
             <e p="Data" t="Include">
               <e p="CubeCollider.cs" t="Include" />
               <e p="Entity.cs" t="Include" />
               <e p="ICollidable.cs" t="Include" />
+            </e>
+            <e p="Usage" t="Include">
+              <e p="NodeBreakerUsage.cs" t="Include" />
             </e>
             <e p="Utilities" t="Include">
               <e p="CollisionDetector.cs" t="Include" />
